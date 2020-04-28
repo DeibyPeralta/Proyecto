@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "375122544499",
+    "firebase_url": "https://turismox-20317.firebaseio.com",
+    "project_id": "turismox-20317",
+    "storage_bucket": "turismox-20317.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:375122544499:android:56f7c4ebb5d6ea90516706",
+        "android_client_info": {
+          "package_name": "com.example.proyecto"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "375122544499-fjgmoe6g4qjtujhsm6v999rtnkusmsbb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.proyecto",
+            "certificate_hash": "568ed0990cced5310535451d7f9b412dcdeb58b8"
+          }
+        },
+        {
+          "client_id": "375122544499-83a0gspjrijrs9oikqia9u7i0scqerpl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2lZ0dpKhsP7XQlqQikMITqSIEZpf5x5g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "375122544499-83a0gspjrijrs9oikqia9u7i0scqerpl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

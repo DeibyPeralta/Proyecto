@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Turismo Valledupar</string>
+    <string name="Valledupar">Valledupar, uno de los lugares más coloridos y llenos de alegría de la costa, su gente y riqueza cultural nos permite disfrutar de muchos lugares realmente memorables</string>
+    <string name="ubicacionx"> ¿Donde estoy?</string>
+    <string name="marker_detail_latlng">(%1$.2f, %2$.2f)</string>
+
+    // main
+    <string name="eventos">Eventos</string>
+    <string name="hacer">Que hacer?</string>
+    <string name="visitar">Que visitar</string>
+    <string name="recreacion">Recreacion</string>
+    <string name="region">Region</string>
+    <string name="fiestas">Fiestas</string>
+    <string name="iniciarSesion">Iniciar sesion</string>
+
+    //registrarse
+    <string name="registrarse">Registrarse</string>
+    <string name="cuenta">Ya tengo una cuenta</string>
+    <string name="textUsuario">Escribe tu usuario</string>
+    <string name="textClave">Escribe tu contraseña</string>
+    <string name="textCorreo">Escribe tu correo</string>
+    <string name="olvidoPass">¿Olvido su contraseña?</string>
+
+    <string name="cambiarClave">Cambiar clave</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

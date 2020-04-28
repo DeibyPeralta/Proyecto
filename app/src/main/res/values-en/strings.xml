@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Turismo Valledupar</string>
+    <string name="Valledupar">Valledupar, one of the most colorful and joyful places on the coast, its people and cultural wealth allows us to enjoy many truly memorable places</string>
+    <string name="ubicacionx">Where I am?</string>
+    <string name="marker_detail_latlng">(%1$.2f, %2$.2f)</string>
+
+    // main
+    <string name="eventos">Events</string>
+    <string name="hacer">Que hacer?</string>
+    <string name="visitar">What to do?</string>
+    <string name="recreacion">Recreation</string>
+    <string name="region">Region</string>
+    <string name="fiestas">Parties</string>
+    <string name="iniciarSesion">Log in</string>
+
+    //registrarse
+    <string name="registrarse">Check in</string>
+    <string name="cuenta">I already have an account</string>
+    <string name="textUsuario">Enter your username</string>
+    <string name="textClave">Enter your password</string>
+    <string name="textCorreo">Write your email</string>
+    <string name="olvidoPass">Forgot your password?</string>
+
+    <string name="cambiarClave">Change Password</string>
+
+</resources>
