@@ -3,7 +3,7 @@ proyecto app turismo
 
 ------ 
 
-# Version del curso
+# Version del proyecto de curso
 
 version actual v1.1.1  
 
