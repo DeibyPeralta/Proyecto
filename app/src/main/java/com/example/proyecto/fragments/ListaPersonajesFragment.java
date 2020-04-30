@@ -95,18 +95,15 @@ public class ListaPersonajesFragment extends Fragment {
     }
 
     private void llenarListaPersonajes() {
-        listaPersonajes.add(new Personajes("goku", "Goku es un personaje de tragon ball super", R.drawable.ic_launcher_background,"Goku es un personaje de tragon ball super", R.drawable.ic_launcher_background));
+        listaPersonajes.add(new Personajes("La mina", getString(R.string.laMina), R.drawable.la_mina,"Goku es un personaje de tragon ball super", R.drawable.ic_launcher_background));
 
-        listaPersonajes.add(new Personajes("gohan", "Goku es un personaje de tragon ball super", R.drawable.ic_launcher_background,"Goku es un personaje de tragon ball super", R.drawable.ic_launcher_background));
+        listaPersonajes.add(new Personajes("Atanquez", getString(R.string.pruebaAtanques), R.drawable.atanques,"Goku es un personaje de tragon ball super", R.drawable.ic_launcher_background));
 
-        listaPersonajes.add(new Personajes("vegeta", "Goku es un personaje de tragon ball super", R.drawable.ic_launcher_background,"Goku es un personaje de tragon ball super", R.drawable.ic_launcher_background));
+        listaPersonajes.add(new Personajes("Chemesquemena", "Goku es un personaje de tragon ball super", R.drawable.chemesquemenax,"Goku es un personaje de tragon ball super", R.drawable.ic_launcher_background));
 
-        listaPersonajes.add(new Personajes("picoro", "Goku es un personaje de tragon ball super", R.drawable.ic_launcher_background,"Goku es un personaje de tragon ball super", R.drawable.ic_launcher_background));
+        listaPersonajes.add(new Personajes("chemesquemena", "Goku es un personaje de tragon ball super", R.drawable.chemesquemena,"Goku es un personaje de tragon ball super", R.drawable.ic_launcher_background));
 
-        listaPersonajes.add(new Personajes("krilin", "Goku es un personaje de tragon ball super", R.drawable.ic_launcher_background,"Goku es un personaje de tragon ball super", R.drawable.ic_launcher_background));
-
-        listaPersonajes.add(new Personajes("magin bo", "Goku es un personaje de tragon ball super", R.drawable.ic_launcher_background,"Goku es un personaje de tragon ball super", R.drawable.ic_launcher_background));
-
+        listaPersonajes.add(new Personajes("atanques", getString(R.string.pruebaAtanques), R.drawable.atanquez,"Goku es un personaje de tragon ball super", R.drawable.ic_launcher_background));
 
         // para mostrar mas solo copy paste
     }
