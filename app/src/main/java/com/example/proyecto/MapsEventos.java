@@ -1,36 +1,23 @@
 package com.example.proyecto;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
 
-import android.Manifest;
-import android.content.Context;
-import android.content.pm.PackageManager;
 import android.location.Location;
-import android.location.LocationManager;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.Toast;
 
-import com.google.android.gms.common.internal.GoogleApiAvailabilityCache;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
-import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -42,7 +29,7 @@ public class MapsEventos extends AppCompatActivity implements GoogleMap.OnMarker
     private GoogleMap mMap;
     private Marker marketPrueba, infoWindows, marcacdor;
     double lat = 0.0, lon = 0.0;
-    dialogoPrueba fragmentDialog= new dialogoPrueba();
+   // dialogoPrueba fragmentDialog= new dialogoPrueba();
     private ArrayList<Marker> guardarMarcadorUno = new ArrayList<>();
     private ArrayList<Marker> guardarMarcadorDos = new ArrayList<>();
 

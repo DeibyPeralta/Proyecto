@@ -67,7 +67,4 @@ public void eventos(View view){
         startActivity(queHacer);
     }
 
-    public void menu(View view){
-
-    }
 }

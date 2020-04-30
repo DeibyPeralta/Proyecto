@@ -52,21 +52,15 @@ public class EventosPrueba extends FragmentActivity implements OnMapReadyCallbac
         if (ActivityCompat.shouldShowRequestPermissionRationale(this,
                 Manifest.permission.ACCESS_COARSE_LOCATION)) {
         } else {
-
             ActivityCompat.requestPermissions(this,
-                    new String[]{Manifest.permission.ACCESS_COARSE_LOCATION},
-                    1);
-
+                    new String[]{Manifest.permission.ACCESS_COARSE_LOCATION},1);
         }
 
         if (ActivityCompat.shouldShowRequestPermissionRationale(this,
                 Manifest.permission.ACCESS_FINE_LOCATION)) {
         } else {
-
             ActivityCompat.requestPermissions(this,
-                    new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
-                    1);
-
+                    new String[]{Manifest.permission.ACCESS_FINE_LOCATION},1);
         }
 
         miUbicacion.setMyLocationEnabled(true );
@@ -91,7 +85,7 @@ public class EventosPrueba extends FragmentActivity implements OnMapReadyCallbac
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(upc, 14));// personalizar zoom
 
     }
-
+/*
     @Override
     public void onRequestPermissionsResult(int requestCode,
                                            String[] permissions, int[] grantResults) {
@@ -108,9 +102,7 @@ public class EventosPrueba extends FragmentActivity implements OnMapReadyCallbac
                 }
                 return;
             }
-
-
         }
-    }
+    }*/
 
 }
