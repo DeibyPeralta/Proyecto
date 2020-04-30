@@ -40,7 +40,7 @@ Tener en cuenta tener instalado el SDK de acuerdo a la version del proyecto ( re
 
 | nombre | apellido | id |
 | ------ | -------- | ------ | 
-| Deiby  | eSPINOSA   | 123 |
+| Deiby  | Espinosa   | 123 |
 | Nahun | Montesino | UPC |
 | Kendy | Alfaro | UPc
 
