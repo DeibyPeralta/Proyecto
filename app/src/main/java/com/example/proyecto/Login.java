@@ -62,7 +62,7 @@ public class Login extends AppCompatActivity {
             }
         });
     }
-    // naun prueba
+    
     public void Restablecerx(View view){
         startActivity(new Intent(Login.this, resetPass.class));
     }
