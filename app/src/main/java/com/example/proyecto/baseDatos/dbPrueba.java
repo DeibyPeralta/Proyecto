@@ -19,6 +19,6 @@ public class dbPrueba extends SQLiteOpenHelper{
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
+// esto no hace nada, borrar despues
     }
 }
