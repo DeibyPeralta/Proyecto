@@ -3,12 +3,16 @@ package com.example.proyecto;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ContentValues;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.example.proyecto.utilidades.dbUtilidades;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -31,8 +35,8 @@ public class Registrarse extends AppCompatActivity {
     private String mail="";
     private String pass="";
 
-    FirebaseAuth autenticaciondb;
-    DatabaseReference baseDatos;
+ //   FirebaseAuth autenticaciondb;
+ //   DatabaseReference baseDatos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,8 +50,8 @@ public class Registrarse extends AppCompatActivity {
         registrarUsuario = findViewById(R.id.registrarse);
         loginUsuario = findViewById(R.id.logear);
 
-        autenticaciondb = FirebaseAuth.getInstance();
-        baseDatos = FirebaseDatabase.getInstance().getReference();// referencia al nodo principal
+//        autenticaciondb = FirebaseAuth.getInstance();
+//        baseDatos = FirebaseDatabase.getInstance().getReference();// referencia al nodo principal
 
         registrarUsuario.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,10 +61,10 @@ public class Registrarse extends AppCompatActivity {
                 pass = clave.getText().toString();
 
                 if ( !name.isEmpty() && !mail.isEmpty() && !pass.isEmpty() ){
-                    if ( pass.length() >= 6 ){
+                    if ( pass.length() >= 4 ){
                         RegistrarUsers();
                     }else{
-                        Toast.makeText(Registrarse.this, "La clave debe tener 6 caracteres", Toast.LENGTH_LONG).show();
+                        Toast.makeText(Registrarse.this, "La clave debe tener 4 caracteres", Toast.LENGTH_LONG).show();
                     }
                 }else{
                     Toast.makeText(Registrarse.this, "Debes llenar todos los campos", Toast.LENGTH_LONG).show();
@@ -77,6 +81,31 @@ public class Registrarse extends AppCompatActivity {
         });
     }
 
+   private void RegistrarUsers(){
+       conexxionSQLiteHelper conexxion = new conexxionSQLiteHelper(this, "db_usuario", null, 1);
+       SQLiteDatabase baseDatos = conexxion.getWritableDatabase();
+
+       ContentValues registro = new ContentValues();
+       
+       registro.put(dbUtilidades.campo_nombre, name);
+       registro.put(dbUtilidades.campo_correo, mail);
+       registro.put(dbUtilidades.campo_password, pass);
+
+       long idResultado = baseDatos.insert(dbUtilidades.tabla_usuario, null, registro);
+
+       if( idResultado == -1) Toast.makeText(this, "Error with inserting users", Toast.LENGTH_SHORT).show();
+       else Toast.makeText(this, "users created", Toast.LENGTH_SHORT).show();
+
+       baseDatos.close();
+
+       usuario.setText("");
+       correo.setText("");
+       clave.setText("");
+   }
+
+}
+
+/*                                      aqui se registra con firebase
     private void RegistrarUsers(){
         autenticaciondb.createUserWithEmailAndPassword(mail, pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
@@ -168,4 +197,3 @@ linea 36 para guardar
     }
 */
 
-}

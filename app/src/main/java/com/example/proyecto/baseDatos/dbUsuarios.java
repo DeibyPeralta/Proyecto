@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 public class dbUsuarios implements Serializable {
 
-    private int id;
+    private Integer id;
     private String nameUsuario;
     private String correo;
     private String password;
@@ -51,4 +51,5 @@ public class dbUsuarios implements Serializable {
     public void setPassword(String password) {
         this.password = password;
     }
+
 }
