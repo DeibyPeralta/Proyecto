@@ -86,7 +86,7 @@ public class Registrarse extends AppCompatActivity {
        SQLiteDatabase baseDatos = conexxion.getWritableDatabase();
 
        ContentValues registro = new ContentValues();
-       
+
        registro.put(dbUtilidades.campo_nombre, name);
        registro.put(dbUtilidades.campo_correo, mail);
        registro.put(dbUtilidades.campo_password, pass);
