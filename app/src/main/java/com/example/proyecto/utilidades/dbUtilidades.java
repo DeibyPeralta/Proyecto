@@ -2,9 +2,9 @@ package com.example.proyecto.utilidades;
 
 public class dbUtilidades {
     // constantes campos tabla usuario
-    public static final String tabla_usuario ="dbUsuarios";
+    public static final String tabla_usuario ="usuarios";
 
-    public static final String campo_id ="id";
+   // public static final String campo_id ="id";
     public static final String campo_nombre = "nameUsuario";
     public static final String campo_correo = "correo";
     public static final String campo_password = "password";

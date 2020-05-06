@@ -55,8 +55,6 @@ public class Registrarse extends AppCompatActivity {
         registrarUsuario = findViewById(R.id.registrarse);
         loginUsuario = findViewById(R.id.logear);
 
-
-
 //        autenticaciondb = FirebaseAuth.getInstance();
 //        baseDatos = FirebaseDatabase.getInstance().getReference();// referencia al nodo principal
 
