@@ -5,14 +5,13 @@ public class dbUtilidades {
     public static final String tabla_usuario ="dbUsuarios";
 
     public static final String campo_id ="id";
-    public static final String campo_nombre = "usuario";
+    public static final String campo_nombre = "nameUsuario";
     public static final String campo_correo = "correo";
-    public static final String campo_password = "passwork";
+    public static final String campo_password = "password";
 
     public static final String Create_Table_Usuario = "CREATE TABLE " + tabla_usuario
-            + " ("+ campo_id +" INTEGER PRIMARY KEY AUTOINCREMENT, "
-            + campo_nombre +" Text, "
+            + " ("+ campo_nombre +" Text, "
             + campo_correo +"text,"
-            + campo_password+" Text)";
+            + campo_password +" Text)";
 
 }

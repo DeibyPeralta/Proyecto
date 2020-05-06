@@ -15,7 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:background="#42555252">
+            android:background="#817F7F">
 
             <ImageView
                 android:id="@+id/foto"

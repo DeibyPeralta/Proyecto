@@ -5,13 +5,17 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
 import android.content.Intent;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.Toast;
 
+import com.example.proyecto.baseDatos.dbUsuarios;
 import com.example.proyecto.utilidades.dbUtilidades;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -21,6 +25,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -49,6 +54,8 @@ public class Registrarse extends AppCompatActivity {
 
         registrarUsuario = findViewById(R.id.registrarse);
         loginUsuario = findViewById(R.id.logear);
+
+
 
 //        autenticaciondb = FirebaseAuth.getInstance();
 //        baseDatos = FirebaseDatabase.getInstance().getReference();// referencia al nodo principal
@@ -102,6 +109,8 @@ public class Registrarse extends AppCompatActivity {
        correo.setText("");
        clave.setText("");
    }
+
+
 
 }
 
