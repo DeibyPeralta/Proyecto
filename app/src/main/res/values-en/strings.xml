@@ -19,6 +19,7 @@
     <string name="cuenta">I already have an account</string>
     <string name="textUsuario">Enter your username</string>
     <string name="textClave">Enter your password</string>
+    <string name="textClave2">Enter your new password</string>
     <string name="textCorreo">Write your email</string>
     <string name="olvidoPass">Forgot your password?</string>
 

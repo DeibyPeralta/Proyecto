@@ -18,6 +18,7 @@
     <string name="cuenta">Ya tengo una cuenta</string>
     <string name="textUsuario">Escribe tu usuario</string>
     <string name="textClave">Escribe tu contraseña</string>
+    <string name="textClave2">Escribe tu contraseña nueva</string>
     <string name="textCorreo">Escribe tu correo</string>
     <string name="olvidoPass">¿Olvido su contraseña?</string>
 

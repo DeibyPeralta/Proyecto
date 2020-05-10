@@ -1,21 +1,20 @@
 package com.example.proyecto.baseDatos;
 
-public class daseDatos {
+public class baseDatos {
 
     private String usuario;
     private String correo;
     private String contraseña;
 
-    public daseDatos(String usuario, String correo, String contraseña) {
+    public baseDatos(String usuario, String correo, String contraseña) {
         this.usuario = usuario;
         this.correo = correo;
         this.contraseña = contraseña;
     }
 
-    public daseDatos() {
+    public baseDatos() {
 
     }
-
 
     public String getUsuario() {
         return usuario;
