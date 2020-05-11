@@ -16,8 +16,7 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -33,7 +32,7 @@ public class MapsEventos extends AppCompatActivity implements GoogleMap.OnMarker
     private ArrayList<Marker> guardarMarcadorUno = new ArrayList<>();
     private ArrayList<Marker> guardarMarcadorDos = new ArrayList<>();
 
-    DatabaseReference basedatos;
+
 
     private FusedLocationProviderClient fusedLocationClient; // ubicacion
 
@@ -50,42 +49,12 @@ public class MapsEventos extends AppCompatActivity implements GoogleMap.OnMarker
 
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
 
-        basedatos =  FirebaseDatabase.getInstance().getReference();// referencia al nodo principal
+
     //   ubicacion();     // funcion para saber la ubicacion
 
     }
 
-    public void ubicacion(){
 
-        // validar permisos de ubicacion
-  /*      if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED){
-
-            ActivityCompat.requestPermissions (this, new String[] {
-                Manifest.permission.ACCESS_FINE_LOCATION},
-                    MY_PERMISSIONS_REQUEST_READ_CONTRACTS );
-
-            return;
-        }*/
-        fusedLocationClient.getLastLocation()
-                .addOnSuccessListener(this, new OnSuccessListener<Location>() {
-                    @Override
-                    public void onSuccess(Location location) {
-                        // Got last known location. In some rare situations this can be null.
-                        if (location != null) {
-
-                            Map<String, Object> ubicacion = new HashMap<>();
-
-                            ubicacion.put("latitud", location.getLongitude());
-                            ubicacion.put("longitud", location.getLongitude());
-
-                            basedatos.child("ubicacion").push().setValue(ubicacion);
-
-                        }else{
-                            Toast.makeText(MapsEventos.this, "no se guardo la ubicacion", Toast.LENGTH_LONG).show();
-                        }
-                    }
-                });
-    }
 
 
     @Override

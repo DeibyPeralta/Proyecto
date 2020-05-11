@@ -15,16 +15,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.proyecto.utilidades.utilidadesGuardar;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.FirebaseAuth;
+
 
 public class resetPass extends AppCompatActivity {
 
     private EditText correox, clavex;
     String datosUpate="";
     conexionSQLiteHelper conexxion;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

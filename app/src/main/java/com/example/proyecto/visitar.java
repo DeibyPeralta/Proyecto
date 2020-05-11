@@ -1,26 +1,23 @@
 package com.example.proyecto;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
 import android.os.Bundle;
-
-
+import com.example.proyecto.fragments.EventosFragment;
 
 
 public class visitar extends AppCompatActivity {
 
- //   ListaPersonajesFragment listaFragmentx;
+ Fragment fragmentMenu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_visitar);
 
-        // llamo al fragment
-   //    listaFragmentx = new ListaPersonajesFragment();
-
-        // es para cargar en el activity el fragment
-    //    getSupportFragmentManager().beginTransaction().replace(R.id.sitioxx, listaFragmentx).commit();
+        fragmentMenu = new EventosFragment();
+        getSupportFragmentManager().beginTransaction().replace(R.id.contenedorFrame, fragmentMenu).commit();
 
     }
 
