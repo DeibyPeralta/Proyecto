@@ -38,6 +38,9 @@
             android:name=".QueHacer"
             android:screenOrientation="locked" />
         <activity
+            android:name=".EventosPrueba"
+            android:label="title_activity_eventos_prueba" />
+        <activity
             android:name=".MapsEventos"
             android:label="title_activity_maps_eventos" />
         <activity
