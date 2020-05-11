@@ -25,4 +25,5 @@
 
     <string name="pruebaAtanques" translatable="false">Es el principal asentamiento de la etnia Kankuama, ubicada en medio de los ríos Chiscuinlla y Candela. Sus calles empedradas cruzan pequeños cerros y forman hileras de caminos que se comunican entre sí.</string>
     <string name="laMina">N.º 1 de 6 Actividades al aire libre en Valledupar Actividades al aire libre, Más actividades al aire libre</string>
+    <string name="title_activity_maps_donde_estoy">Map</string>
 </resources>
