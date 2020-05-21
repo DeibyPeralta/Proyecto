@@ -9,14 +9,17 @@ import com.example.proyecto.fragments.EventosFragment;
 
 public class visitar extends AppCompatActivity {
 
- Fragment fragmentMenu;
+    Fragment fragmentMenu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_visitar);
 
+        // declaro al fragment
         fragmentMenu = new EventosFragment();
+
+        // es para cargar en el activity el fragment
         getSupportFragmentManager().beginTransaction().replace(R.id.contenedorFrame, fragmentMenu).commit();
 
     }

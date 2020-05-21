@@ -1,14 +1,24 @@
 package com.example.proyecto.fragments;
 
+import android.app.Activity;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.example.proyecto.R;
+import com.example.proyecto.adaptadores.adaptadorVisitar;
+import com.example.proyecto.informacionPrueba.informacion;
+
+import java.util.ArrayList;
+
+import com.example.proyecto.interfaxex.IComunicaFragments;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -24,6 +34,11 @@ public class EventosFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    ArrayList<informacion> listaInformacion;
+    RecyclerView recyclerPersonajes;
+    Activity activityx;
+    IComunicaFragments interfaceComunicaFragments;
 
     public EventosFragment() {
         // Required empty public constructor
@@ -59,7 +74,37 @@ public class EventosFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_eventos, container, false);
+        // necesario para mostrar la lista en el fragment
+        View vista = inflater.inflate(R.layout.fragment_eventos, container, false);
+
+        listaInformacion = new ArrayList<>(); // generar la lista
+        recyclerPersonajes = vista.findViewById(R.id.recyclerId);
+        recyclerPersonajes.setLayoutManager(new LinearLayoutManager(getContext()));// getContext porque estamos en un fragment
+
+        llenarListaPersonajes();
+        adaptadorVisitar adapter = new adaptadorVisitar(listaInformacion);
+        recyclerPersonajes.setAdapter(adapter);
+
+        adapter.setOnClicListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getContext(), "Selecciona; "+listaInformacion.get(recyclerPersonajes.getChildAdapterPosition(v)).getNombre(), Toast.LENGTH_SHORT).show();
+
+                // envio detalles por medio de interfacecomuncation
+              //  interfaceComunicaFragments.enviarPersonajes(listaInformacion.get(recyclerPersonajes.getChildAdapterPosition(v)));
+            }
+        });
+
+        return vista;
     }
+
+
+
+    private void llenarListaPersonajes() {
+        listaInformacion.add(new informacion("Chemesquemena", "Chemesquemena es uno de los 26 corregimientos del municipio colombiano de Valledupar y una de las comunidades que integran el Resguardo indígena Kankuamo, ubicada al norte, en la parte alta de las montañas de la Sierra Nevada de Santa Marta, en el departamento del Cesar", R.drawable.chemesquemena));
+        // para mostrar mas solo copy paste
+    }
+
+
+
 }
