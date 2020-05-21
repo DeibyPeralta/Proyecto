@@ -1,4 +1,4 @@
-package com.example.proyecto.adaptadores;
+package com.example.proyecto.fragments;
 
 import android.os.Bundle;
 

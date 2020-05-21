@@ -88,7 +88,7 @@ public class EventosFragment extends Fragment {
         adapter.setOnClicListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getContext(), "Selecciona; "+listaInformacion.get(recyclerPersonajes.getChildAdapterPosition(v)).getNombre(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), "Seleccionaste: "+listaInformacion.get(recyclerPersonajes.getChildAdapterPosition(v)).getNombre(), Toast.LENGTH_SHORT).show();
 
                 // envio detalles por medio de interfacecomuncation
               //  interfaceComunicaFragments.enviarPersonajes(listaInformacion.get(recyclerPersonajes.getChildAdapterPosition(v)));
@@ -101,8 +101,14 @@ public class EventosFragment extends Fragment {
 
 
     private void llenarListaPersonajes() {
-        listaInformacion.add(new informacion("Chemesquemena", "Chemesquemena es uno de los 26 corregimientos del municipio colombiano de Valledupar y una de las comunidades que integran el Resguardo indígena Kankuamo, ubicada al norte, en la parte alta de las montañas de la Sierra Nevada de Santa Marta, en el departamento del Cesar", R.drawable.chemesquemena));
+        listaInformacion.add(new informacion("Chemesquemena", "Es uno de los 26 corregimientos del municipio colombiano de Valledupar y una de las comunidades que integran el Resguardo indígena Kankuamo, ubicada al norte, en la parte alta de las montañas de la Sierra Nevada de Santa Marta, en el departamento del Cesar", R.drawable.chemesquemena));
+        listaInformacion.add(new informacion("Atanquez", "Es una de las doce comunidades que integran el Resguardo Indígena Kankuamo, Se encuentra ubicada en la vertiente suroriental de la Sierra Nevada de Santa Marta, en el departamento del Cesar", R.drawable.atanquez));
+        listaInformacion.add(new informacion("La mina", "La Mina es uno de los 26 corregimientos del municipio colombiano de Valledupar, en el departamento del Cesar.", R.drawable.la_mina));
         // para mostrar mas solo copy paste
+
+        listaInformacion.add(new informacion("Chemesquemena", "Es uno de los 26 corregimientos del municipio colombiano de Valledupar y una de las comunidades que integran el Resguardo indígena Kankuamo, ubicada al norte, en la parte alta de las montañas de la Sierra Nevada de Santa Marta, en el departamento del Cesar", R.drawable.chemesquemena));
+        listaInformacion.add(new informacion("Atanquez", "Es una de las doce comunidades que integran el Resguardo Indígena Kankuamo, Se encuentra ubicada en la vertiente suroriental de la Sierra Nevada de Santa Marta, en el departamento del Cesar", R.drawable.atanquez));
+        listaInformacion.add(new informacion("La mina", "La Mina es uno de los 26 corregimientos del municipio colombiano de Valledupar, en el departamento del Cesar.", R.drawable.la_mina));
     }
 
 
