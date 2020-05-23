@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentNavigation2">
+    <fragment
+        android:id="@+id/fragmentNavigation2"
+        android:name="com.example.proyecto.FragmentNavigation"
+        android:label="fragment_navigation"
+        tools:layout="@layout/fragment_navigation" >
+        <action
+            android:id="@+id/action_fragmentNavigation2_to_fragmentCaminatas3"
+            app:destination="@id/fragmentCaminatas3" />
+        <action
+            android:id="@+id/action_fragmentNavigation2_to_fragmentNadar2"
+            app:destination="@id/fragmentNadar2" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentCaminatas3"
+        android:name="com.example.proyecto.fragments.FragmentCaminatas"
+        android:label="fragment_caminatas"
+        tools:layout="@layout/fragment_caminatas" />
+    <fragment
+        android:id="@+id/fragmentNadar2"
+        android:name="com.example.proyecto.fragments.FragmentNadar"
+        android:label="fragment_nadar"
+        tools:layout="@layout/fragment_nadar" />
+</navigation>

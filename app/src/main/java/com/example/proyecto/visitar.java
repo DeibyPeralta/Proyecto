@@ -9,7 +9,7 @@ import com.example.proyecto.fragments.EventosFragment;
 
 public class visitar extends AppCompatActivity {
 
-    Fragment fragmentMenu;
+    EventosFragment fragmentMenu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
