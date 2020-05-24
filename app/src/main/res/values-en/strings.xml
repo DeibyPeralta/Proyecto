@@ -27,4 +27,14 @@
 
     <string name="pruebaAtanques">It is the main settlement of the Kankuama ethnic group, located in the middle of the Chiscuinlla and Candela rivers. Its cobbled streets cross small hills and form rows of roads that communicate with each other</string>
     <string name="laMina"># 1 of 6 Outdoor Activities in Valledupar Outdoor activities, More outdoor activities</string>
+
+    //que hacer
+    <string name="natacion">swimming</string>
+    <string name="parques">Parks</string>
+    <string name="monumentos">Monuments</string>
+    <string name="sitios">famous sites</string>
+
+    //lugares
+    <string name="parqueHelado">Place where Carlos Vives is honored as ambassador of our culture and folklore, who is also the godfather of this beautiful place. It will be located where the Ice Cream Park is today. It will be connected to the Juglares roundabout and will have water sources. The DC6 plane, parked there for the enjoyment of children, will become a museum of the life and work of this great artist.</string>
+
 </resources>

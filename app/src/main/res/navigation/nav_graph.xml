@@ -6,7 +6,7 @@
     app:startDestination="@id/fragmentNavigation2">
     <fragment
         android:id="@+id/fragmentNavigation2"
-        android:name="com.example.proyecto.FragmentNavigation"
+        android:name="com.example.proyecto.fragments.FragmentNavigation"
         android:label="fragment_navigation"
         tools:layout="@layout/fragment_navigation" >
         <action
@@ -15,15 +15,35 @@
         <action
             android:id="@+id/action_fragmentNavigation2_to_fragmentNadar2"
             app:destination="@id/fragmentNadar2" />
+        <action
+            android:id="@+id/action_fragmentNavigation2_to_fragmentSitios"
+            app:destination="@id/fragmentSitios" />
     </fragment>
     <fragment
         android:id="@+id/fragmentCaminatas3"
         android:name="com.example.proyecto.fragments.FragmentCaminatas"
         android:label="fragment_caminatas"
-        tools:layout="@layout/fragment_caminatas" />
+        tools:layout="@layout/fragment_caminatas" >
+        <action
+            android:id="@+id/action_fragmentCaminatas3_to_fragmentNavigation2"
+            app:destination="@id/fragmentNavigation2" />
+    </fragment>
     <fragment
         android:id="@+id/fragmentNadar2"
         android:name="com.example.proyecto.fragments.FragmentNadar"
         android:label="fragment_nadar"
-        tools:layout="@layout/fragment_nadar" />
+        tools:layout="@layout/fragment_nadar" >
+        <action
+            android:id="@+id/action_fragmentNadar2_to_fragmentNavigation2"
+            app:destination="@id/fragmentNavigation2" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentSitios"
+        android:name="com.example.proyecto.fragments.FragmentSitios"
+        android:label="fragment_sitios"
+        tools:layout="@layout/fragment_sitios" >
+        <action
+            android:id="@+id/action_fragmentSitios_to_fragmentNavigation2"
+            app:destination="@id/fragmentNavigation2" />
+    </fragment>
 </navigation>
