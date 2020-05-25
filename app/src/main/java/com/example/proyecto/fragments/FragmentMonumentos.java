@@ -1,14 +1,18 @@
 package com.example.proyecto.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.proyecto.R;
+import com.getbase.floatingactionbutton.FloatingActionButton;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -56,10 +60,49 @@ public class FragmentMonumentos extends Fragment {
         }
     }
 
+    CardView valle, poporos, eccehomo, cacique;
+    View vista;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_monumentos, container, false);
+        vista = inflater.inflate(R.layout.fragment_monumentos, container, false);
+
+        valle = vista.findViewById(R.id.monumentosCard);
+        valle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(view).navigate(R.id.blankMonumentos);
+            }
+        });
+
+        poporos = vista.findViewById(R.id.poporos);
+        poporos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(view).navigate(R.id.blankPoporos);
+            }
+        });
+
+        eccehomo = vista.findViewById(R.id.eccehomo);
+        eccehomo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(view).navigate(R.id.blankHecceOmo);
+            }
+        });
+
+        cacique = vista.findViewById(R.id.eccehomo);
+        cacique.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(view).navigate(R.id.blankCacique);
+            }
+        });
+
+        return vista;
     }
+
+
 }

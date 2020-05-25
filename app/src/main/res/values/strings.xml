@@ -34,10 +34,23 @@
     <string name="monumentos">Monumentos</string>
     <string name="sitios">Sitios insignes</string>
 
+    //momumentos
+    <string name="valle">Yo amo Valledupar</string>
+    <string name="valledupar">La estrategia Yo Amo a Valledupar, lleva a los vallenatos a internalizar en el corazón el sentido de pertenencia por una ciudad, bella, acogedora, cultural y musical; pero no es amar a Valledupar, es demostrarlo, con cultura ciudadana, con cuidado y limpieza, hablando bien de ella y de su gente. Con amor verdadero por esta tierra llena encanto, que queremos ver en paz.</string>
+    <string name="poporos">Los poporos</string>
+    <string name="poporos2">El Coliseo es uno de los pocos que cuenta con un techo movible. Construido a finales de los años 90s, se encuentra frente a la escultura de Los Poporos. Esta escultura rinde homenaje a las tres etnias indígenas que aún habitan en la Sierra Nevada, como lo son los Arhuacos, los Koguis y los Arzarios.</string>
+    <string name="ecce">Santo Ecce Homo</string>
+    <string name="ecce2">El Santo Ecce Homo es el patrono de Valledupar. Una réplica de 30 metros, que vigila la ciudad desde el Cerro de las Antenas, es lugar de peregrinaje para devotos y meta para deportistas. Fue diseñada por el maestro colombiano Héctor Lombana, la estructura mide 35 metros de altura.</string>
+    <string name="cacique">Cacique Upar</string>
+    <string name="cacique2">Al sur este de la ciudad se levanta imponente El Cacique Upar, una hermosa escultura representativa de nuestros aborígenes indígenas quienes defendieron esta región de los invasores españoles. Curiosamente, a él se debe el nombre de nuestra ciudad, pues Valledupar es un acrónimo de: Valle del Cacique Upar. Él era el máximo jefe de los Chimilas, tribu de la región y quienes tuvieron que desplazarse a la sierra Nevada para evitar su exterminio total.</string>
+
+    //sitios insignes
+    <string name="plaza">Plaza Alfonso Lopez</string>
+    <string name="plaza2">Es la Plaza fundacional de la ciudad. Sede de la famosa Tarima Francisco el hombre y cuna del Festival de la leyenda vallenata, que se celebró allí por varias décadas hasta que fue insuficiente para alojar a los turistas que nos visitaban. Al recorrer las casas que la rodean podrás conocer la historia de la ciudad, leyendo las placas en cada una de ellas. Sus lozas, desde lo alto, representan los caminos de la vida de la cosmogonía arhuaca. Actualmente está siendo remodelada por la alcaldía municipal.</string>
+
     //lugares
     <string name="parqueHelado">Lugar en donde se le rinde homenaje a Carlos Vives como embajador de nuestra cultura y folclor,quien también es el padrino de este bello lugar. Estará ubicado en donde es hoy el parque del Helado. Estará conectado a la glorieta de los Juglares y tendrá fuentes de agua. El avión DC6, parqueado allí para disfrute de los niños, se convertirá en un museo de la vida y obra de este gran artista.</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 
 </resources>

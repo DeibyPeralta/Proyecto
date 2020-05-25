@@ -66,13 +66,11 @@
 
     <Button
         android:id="@+id/saveClave"
-        android:layout_width="145dp"
+        android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="133dp"
-        android:layout_marginLeft="133dp"
         android:layout_marginTop="42dp"
         android:layout_marginEnd="133dp"
-        android:layout_marginRight="133dp"
         android:background="@drawable/boton_redondo"
         android:text="@string/cambiarClave"
         android:textColor="#ffff"

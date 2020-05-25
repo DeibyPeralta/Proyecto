@@ -34,6 +34,21 @@
     <string name="monumentos">Monuments</string>
     <string name="sitios">famous sites</string>
 
+    // monumentos
+    <string name="valle">i love Valledupar</string>
+    <string name="valledupar">The strategy Yo Amo a Valledupar, leads the vallenatos to internalize in their hearts the sense of belonging to a city, beautiful, welcoming, cultural and musical; But it is not to love Valledupar, it is to demonstrate it, with a citizen culture, with care and cleanliness, speaking well of it and its people. With true love for this land full of charm, that we want to see in peace.r</string>
+    <string name="poporos">The poporos</string>
+    <string name="poporos2">The Colosseum is one of the few that has a movable roof. Built in the late 90s, it is located in front of the sculpture of Los Poporos. This sculpture pays tribute to the three indigenous ethnic groups that still inhabit the Sierra Nevada, such as the Arhuacos, the Koguis and the Arzarios.</string>
+    <string name="ecce">Holy Ecce Homo</string>
+    <string name="ecce2">El Santo Ecce Homo es el patrono de Valledupar. Una réplica de 30 metros, que vigila la ciudad desde el Cerro de las Antenas, es lugar de peregrinaje para devotos y meta para deportistas. Fue diseñada por el maestro colombiano Héctor Lombana, la estructura mide 35 metros de altura.</string>
+    <string name="cacique">Cacique Upar</string>
+    <string name="cacique2">To the south east of the city stands the imposing El Cacique Upar, a beautiful sculpture representative of our indigenous aborigines who defended this region from the Spanish invaders. Curiously, it owes the name of our city, because Valledupar is an acronym for: Valle del Cacique Upar. He was the maximum chief of the Chimilas, a tribe of the region and those who had to move to the Sierra Nevada to avoid their total exterminationr</string>
+
+
+    //sitios insignes
+    <string name="plaza">Plaza Alfonso Lopez</string>
+    <string name="plaza2">It is the founding square of the city. Venue of the famous Tarima Francisco el hombre and cradle of the Vallenata Legend Festival, which was held there for several decades until it was insufficient to accommodate the tourists who visited us. By touring the houses that surround it, you can learn about the history of the city, reading the plaques on each one of them. Its earthenware, from above, represent the paths of life of the Arhuaca cosmogony. It is currently being remodeled by the municipal mayor's office.</string>
+
     //lugares
     <string name="parqueHelado">Place where Carlos Vives is honored as ambassador of our culture and folklore, who is also the godfather of this beautiful place. It will be located where the Ice Cream Park is today. It will be connected to the Juglares roundabout and will have water sources. The DC6 plane, parked there for the enjoyment of children, will become a museum of the life and work of this great artist.</string>
 

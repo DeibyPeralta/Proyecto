@@ -21,12 +21,24 @@
     </fragment>
     <fragment
         android:id="@+id/fragmentCaminatas3"
-        android:name="com.example.proyecto.fragments.FragmentCaminatas"
+        android:name="com.example.proyecto.fragments.FragmentMonumentos"
         android:label="fragment_caminatas"
-        tools:layout="@layout/fragment_caminatas" >
+        tools:layout="@layout/fragment_monumentos" >
         <action
             android:id="@+id/action_fragmentCaminatas3_to_fragmentNavigation2"
             app:destination="@id/fragmentNavigation2" />
+        <action
+            android:id="@+id/action_fragmentCaminatas3_to_blankMonumentos"
+            app:destination="@id/blankMonumentos" />
+        <action
+            android:id="@+id/action_fragmentCaminatas3_to_blankPoporos"
+            app:destination="@id/blankPoporos" />
+        <action
+            android:id="@+id/action_fragmentCaminatas3_to_blankHecceOmo"
+            app:destination="@id/blankHecceOmo" />
+        <action
+            android:id="@+id/action_fragmentCaminatas3_to_blankCacique"
+            app:destination="@id/blankCacique" />
     </fragment>
     <fragment
         android:id="@+id/fragmentNadar2"
@@ -36,6 +48,9 @@
         <action
             android:id="@+id/action_fragmentNadar2_to_fragmentNavigation2"
             app:destination="@id/fragmentNavigation2" />
+        <action
+            android:id="@+id/action_fragmentNadar2_to_blankPlaza"
+            app:destination="@id/blankPlaza" />
     </fragment>
     <fragment
         android:id="@+id/fragmentSitios"
@@ -45,5 +60,50 @@
         <action
             android:id="@+id/action_fragmentSitios_to_fragmentNavigation2"
             app:destination="@id/fragmentNavigation2" />
+    </fragment>
+    <fragment
+        android:id="@+id/blankMonumentos"
+        android:name="com.example.proyecto.fragments.momumentos.BlankMonumentos"
+        android:label="fragment_blank_monumentos"
+        tools:layout="@layout/fragment_blank_monumentos" >
+        <action
+            android:id="@+id/action_blankMonumentos_to_fragmentCaminatas3"
+            app:destination="@id/fragmentCaminatas3" />
+    </fragment>
+    <fragment
+        android:id="@+id/blankPoporos"
+        android:name="com.example.proyecto.fragments.momumentos.BlankPoporos"
+        android:label="fragment_blank_poporos"
+        tools:layout="@layout/fragment_blank_poporos" >
+        <action
+            android:id="@+id/action_blankPoporos_to_fragmentCaminatas3"
+            app:destination="@id/fragmentCaminatas3" />
+    </fragment>
+    <fragment
+        android:id="@+id/blankHecceOmo"
+        android:name="com.example.proyecto.fragments.momumentos.BlankHecceOmo"
+        android:label="fragment_blank_hecce_omo"
+        tools:layout="@layout/fragment_blank_hecce_omo" >
+        <action
+            android:id="@+id/action_blankHecceOmo_to_fragmentCaminatas3"
+            app:destination="@id/fragmentCaminatas3" />
+    </fragment>
+    <fragment
+        android:id="@+id/blankCacique"
+        android:name="com.example.proyecto.fragments.momumentos.BlankCacique"
+        android:label="fragment_blank_cacique"
+        tools:layout="@layout/fragment_blank_cacique" >
+        <action
+            android:id="@+id/action_blankCacique_to_fragmentCaminatas3"
+            app:destination="@id/fragmentCaminatas3" />
+    </fragment>
+    <fragment
+        android:id="@+id/blankPlaza"
+        android:name="com.example.proyecto.fragments.sitiosInsignes.BlankPlaza"
+        android:label="fragment_blank_plaza"
+        tools:layout="@layout/fragment_blank_plaza" >
+        <action
+            android:id="@+id/action_blankPlaza_to_fragmentNadar2"
+            app:destination="@id/fragmentNadar2" />
     </fragment>
 </navigation>
