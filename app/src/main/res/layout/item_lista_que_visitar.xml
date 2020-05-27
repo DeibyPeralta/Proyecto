@@ -15,7 +15,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+<<<<<<< HEAD
+            android:background="#42000000">
+=======
             android:background="#817F7F">
+>>>>>>> deiby
 
             <ImageView
                 android:id="@+id/foto"

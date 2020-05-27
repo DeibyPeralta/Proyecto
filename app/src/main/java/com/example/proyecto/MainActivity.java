@@ -48,8 +48,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void visitar(View view){
-        Intent visitar = new Intent(this, visitar.class);
-        startActivity(visitar);
+       Intent visitar = new Intent(this, visitar.class);
+       startActivity(visitar);
     }
 
 public void eventos(View view){

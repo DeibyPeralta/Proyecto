@@ -1,12 +1,15 @@
 package com.example.proyecto;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+<<<<<<< HEAD
+import android.database.sqlite.SQLiteOpenHelper;
+=======
+>>>>>>> deiby
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -15,6 +18,9 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
+<<<<<<< HEAD
+import com.example.proyecto.utilidades.utilidadesGuardar;
+=======
 import com.example.proyecto.baseDatos.dbUsuarios;
 import com.example.proyecto.utilidades.dbUtilidades;
 
@@ -28,10 +34,14 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+>>>>>>> deiby
 
 public class Registrarse extends AppCompatActivity {
 
     private EditText usuario, clave, correo;
+<<<<<<< HEAD
+    private Button loginUsuario;
+=======
     private Button registrarUsuario, loginUsuario;
 
     // variables de los datos a registrar
@@ -42,6 +52,7 @@ public class Registrarse extends AppCompatActivity {
 
  //   FirebaseAuth autenticaciondb;
  //   DatabaseReference baseDatos;
+>>>>>>> deiby
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,9 +63,10 @@ public class Registrarse extends AppCompatActivity {
         clave = findViewById(R.id.clave);
         correo = findViewById(R.id.correoxx);
 
-        registrarUsuario = findViewById(R.id.registrarse);
         loginUsuario = findViewById(R.id.logear);
 
+<<<<<<< HEAD
+=======
 //        autenticaciondb = FirebaseAuth.getInstance();
 //        baseDatos = FirebaseDatabase.getInstance().getReference();// referencia al nodo principal
 
@@ -77,6 +89,7 @@ public class Registrarse extends AppCompatActivity {
             }
         });
 
+>>>>>>> deiby
         loginUsuario.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -86,6 +99,32 @@ public class Registrarse extends AppCompatActivity {
         });
     }
 
+<<<<<<< HEAD
+public void RegistrarUsers(View view){
+    conexionSQLiteHelper conexion = new conexionSQLiteHelper(this, "db_usuario", null, 1);
+    SQLiteDatabase baseDatos = conexion.getWritableDatabase();
+
+    String name = usuario.getText().toString();
+    String mail = correo.getText().toString();
+    String pass = clave.getText().toString();
+
+    if ( !name.isEmpty() && !mail.isEmpty() && !pass.isEmpty() ){
+            ContentValues registro = new ContentValues();
+
+            registro.put(utilidadesGuardar.usuario, name);
+            registro.put(utilidadesGuardar.correo, mail);
+            registro.put(utilidadesGuardar.contraseña, pass);
+
+            if ( buscarDatos() == true || valiCorreo() == true){
+                Toast.makeText(this, "Usuario ya registrado", Toast.LENGTH_SHORT).show();
+            }else{
+                Long idResultado = baseDatos.insert(utilidadesGuardar.tabla_usuario, null, registro);
+
+                if( idResultado == -1) Toast.makeText(this, "Error with inserting users", Toast.LENGTH_SHORT).show();
+                else Toast.makeText(this, "users created", Toast.LENGTH_SHORT).show();
+
+                baseDatos.close();
+=======
    private void RegistrarUsers(){
        conexxionSQLiteHelper conexxion = new conexxionSQLiteHelper(this, "db_usuario", null, 1);
        SQLiteDatabase baseDatos = conexxion.getWritableDatabase();
@@ -139,10 +178,59 @@ public class Registrarse extends AppCompatActivity {
                 }else{
                     Toast.makeText(Registrarse.this, "No se registro el usuario, verificar datos", Toast.LENGTH_LONG).show();
                 }
+>>>>>>> deiby
             }
-        });
-    }
 
+
+        usuario.setText("");
+        correo.setText("");
+        clave.setText("");
+    }else{
+        Toast.makeText(Registrarse.this, "Debes llenar todos los campos", Toast.LENGTH_LONG).show();
+    }
+}
+
+public boolean buscarDatos(){
+    conexionSQLiteHelper conexion = new conexionSQLiteHelper(this, "db_usuario", null, 1);
+    SQLiteDatabase baseDatos = conexion.getWritableDatabase();
+
+    String[] parametros = { usuario.getText().toString() };
+    String[] campos = {utilidadesGuardar.usuario, utilidadesGuardar.correo, utilidadesGuardar.contraseña};
+
+    try {
+        Cursor cursorBuscador= baseDatos.query(utilidadesGuardar.tabla_usuario, campos, utilidadesGuardar.usuario +"=?", parametros, null, null, null);
+        cursorBuscador.moveToFirst();
+
+        if ( !cursorBuscador.getString(0).isEmpty() ){
+            return true;
+        }else{
+            return false;
+        }
+    }catch (Exception e){
+        return false;
+    }
+}
+
+public boolean valiCorreo(){
+    conexionSQLiteHelper conexion = new conexionSQLiteHelper(this, "db_usuario", null, 1);
+    SQLiteDatabase baseDatos = conexion.getWritableDatabase();
+
+    String[] parametros = { correo.getText().toString() };
+    String[] campos = {utilidadesGuardar.usuario, utilidadesGuardar.correo, utilidadesGuardar.contraseña};
+
+    try {
+        Cursor cursorBuscador= baseDatos.query(utilidadesGuardar.tabla_usuario, campos, utilidadesGuardar.correo +"=?", parametros, null, null, null);
+        cursorBuscador.moveToFirst();
+
+        if ( !cursorBuscador.getString(0).isEmpty() ){
+            return true;
+        }else{
+            return false;
+        }
+    }catch (Exception e){
+        return false;
+    }
+}
 
 
 /*

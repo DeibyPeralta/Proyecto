@@ -16,17 +16,17 @@ public class QueHacer extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_que_hacer);
 
-        final FloatingActionsMenu fabMenu =  findViewById(R.id.menuPrincipal);
-        final FloatingActionButton fab1 =  findViewById(R.id.mapas);
+  //      final FloatingActionsMenu fabMenu =  findViewById(R.id.menuPrincipal);
+   //     final FloatingActionButton fab1 =  findViewById(R.id.mapas);
 
-        fab1.setOnClickListener(new View.OnClickListener() {
+   /*     fab1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(QueHacer.this,  EventosPrueba.class);
                 startActivity(intent);
                 fabMenu.collapse(); // cierre despues de accionarse
             }
-        });
+        });*/
     }
 
 

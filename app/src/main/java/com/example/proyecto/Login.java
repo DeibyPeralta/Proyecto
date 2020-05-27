@@ -1,8 +1,9 @@
 package com.example.proyecto;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -10,21 +11,16 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
+import com.example.proyecto.baseDatos.baseDatos;
+import com.example.proyecto.utilidades.utilidadesGuardar;
+
+import java.util.ArrayList;
 
 public class Login extends AppCompatActivity {
 
     private EditText usuariosx, clave;
-    private Button logearsexx, registrarsexx;
 
-    // creo objeto
-    private FirebaseAuth autenticacion;
-
-    private String mail = "";
-    private String pass = "";
+    conexionSQLiteHelper conexxion;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,84 +31,68 @@ public class Login extends AppCompatActivity {
         usuariosx = findViewById(R.id.mailx);
         clave = findViewById(R.id.contraseñax);
 
-        logearsexx = findViewById(R.id.logear);
-        registrarsexx = findViewById(R.id.registrarse);
+        conexxion = new conexionSQLiteHelper(this, "db_usuario", null, 1);
 
-        autenticacion = FirebaseAuth.getInstance();
-
-        logearsexx.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mail = usuariosx.getText().toString();
-                pass = clave.getText().toString();
-
-                if ( !mail.isEmpty() && !pass.isEmpty() ){
-                    loginUsers();
-                }else {
-                    Toast.makeText(Login.this, "Debes llenar todos los campos", Toast.LENGTH_LONG).show();
-                }
-            }
-        });
-
-        registrarsexx.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(Login.this, Registrarse.class));
-                finish();
-            }
-        });
-    }
-    // naun prueba
-    public void Restablecerx(View view){
-        startActivity(new Intent(Login.this, resetPass.class));
-    }
-private void loginUsers(){
-        autenticacion.signInWithEmailAndPassword(mail, pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-                if( task.isSuccessful() ){
-                    startActivity(new Intent(Login.this, EventosPrueba.class));
-                    finish();
-                }else{
-                    Toast.makeText(Login.this, "No se pudo iniciar sesion, comprovar datos", Toast.LENGTH_LONG).show();
-                }
-            }
-        });
 }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
+    public void Restablecerx(View view){
+        Intent restablecer = new Intent(this, resetPass.class);
+        startActivity(restablecer);
+    }
 
-        if ( autenticacion.getCurrentUser() != null ){
-            startActivity(new Intent(Login.this, EventosPrueba.class));
-            finish();
+    public void registro(View view){
+        Intent registro = new Intent(this, Registrarse.class);
+        startActivity(registro);
+    }
+
+public void buscarDatos(View view){
+     if ( valiUsu()== true && valiPass()== true){
+         Toast.makeText(this, "Usuario confirmado", Toast.LENGTH_SHORT).show();
+
+         Intent inicio = new Intent(this, MainActivity.class);
+         startActivity(inicio);
+     }else{
+         Toast.makeText(this, "Datos erroneos", Toast.LENGTH_SHORT).show();
+     }
+}
+
+public boolean valiPass(){
+    SQLiteDatabase baseDatosx = conexxion.getWritableDatabase();
+    String[] parametros = {clave.getText().toString() };
+    String[] campos = {utilidadesGuardar.usuario, utilidadesGuardar.correo, utilidadesGuardar.contraseña};
+
+    try {
+        Cursor cursorBuscador= baseDatosx.query(utilidadesGuardar.tabla_usuario, campos, utilidadesGuardar.contraseña +"=?", parametros, null, null, null);
+
+        cursorBuscador.moveToFirst();
+        if ( !cursorBuscador.getString(0).isEmpty() ){
+            return true;
+        }else{
+            return false;
         }
+    }catch (Exception e){
+        return false;
     }
+}
 
-// metodo para consultar datos
-  /*  private void Consultar(View view){
+public boolean valiUsu(){
+    SQLiteDatabase baseDatosx = conexxion.getWritableDatabase();
+    String[] parametros = {usuariosx.getText().toString() };
+    String[] campos = {utilidadesGuardar.usuario, utilidadesGuardar.correo, utilidadesGuardar.contraseña};
 
-        // objeto que busco
-        baseDatos.child("Usuarios");
+    try {
+        Cursor cursorBuscador= baseDatosx.query(utilidadesGuardar.tabla_usuario, campos, utilidadesGuardar.usuario +"=?", parametros, null, null, null);
 
+        cursorBuscador.moveToFirst();
+        if ( !cursorBuscador.getString(0).isEmpty() ){
+            return true;
+        }else{
+            return false;
+        }
 
-        baseDatos.addChildEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if (dataSnapshot.exists()) {
-                    String Correo = DataSnapshot.child("correo").getValue().toString();
-
-                    usuariosx.setText(Correo);
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
+    }catch (Exception e){
+        return false;
     }
-  */
-    
+}
+
 }
