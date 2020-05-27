@@ -9,6 +9,7 @@
     tools:context=".Registrarse">
 
 
+<<<<<<< HEAD
     <EditText
         android:id="@+id/correoxx"
         android:layout_width="245dp"
@@ -35,18 +36,36 @@
         android:id="@+id/logear"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+=======
+    <Button
+        android:id="@+id/logear"
+        android:layout_width="172dp"
+        android:layout_height="44dp"
+>>>>>>> deiby
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
+<<<<<<< HEAD
         android:layout_marginStart="124dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="125dp"
+=======
+        android:layout_marginStart="109dp"
+        android:layout_marginLeft="109dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="110dp"
+        android:layout_marginRight="110dp"
+>>>>>>> deiby
         android:background="@drawable/boton_redondo"
         android:text="@string/cuenta"
         android:textColor="@color/common_google_signin_btn_text_dark_pressed"
         app:layout_constraintEnd_toEndOf="parent"
+<<<<<<< HEAD
+=======
+        app:layout_constraintHorizontal_bias="0.0"
+>>>>>>> deiby
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/registrarse" />
 
@@ -61,7 +80,11 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="108dp"
         android:layout_marginLeft="108dp"
+<<<<<<< HEAD
         android:layout_marginTop="32dp"
+=======
+        android:layout_marginTop="20dp"
+>>>>>>> deiby
         android:layout_marginEnd="108dp"
         android:layout_marginRight="108dp"
         android:background="@drawable/boton_redondo"
@@ -73,51 +96,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/correoxx" />
 
-    <TextView
-        android:id="@+id/txtSesion"
-        android:layout_width="wrap_content"
-        android:layout_height="61dp"
-        android:layout_alignParentTop="true"
-        android:text="Registro de usuarios"
-        android:textColor="@color/design_default_color_error"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="16dp" />
-
-    <EditText
-        android:id="@+id/userx"
-        android:layout_width="245dp"
-        android:layout_height="50dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="59dp"
-        android:layout_marginLeft="59dp"
-        android:layout_marginTop="129dp"
-        android:layout_marginEnd="87dp"
-        android:layout_marginRight="87dp"
-        android:background="@drawable/sombra_txt"
-        android:ems="10"
-        android:gravity="center"
-        android:hint="@string/textUsuario"
-        android:inputType="textPersonName"
-        android:textColor="#ffff"
-        android:textColorHint="@color/common_google_signin_btn_text_dark_pressed"
-        android:textIsSelectable="false"
-        android:textStyle="italic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtSesion" />
-
     <EditText
         android:id="@+id/clave"
         android:layout_width="245dp"
         android:layout_height="50dp"
         android:layout_above="@+id/userx"
-        android:layout_marginStart="59dp"
-        android:layout_marginLeft="59dp"
-        android:layout_marginEnd="87dp"
-        android:layout_marginRight="87dp"
+        android:layout_marginStart="73dp"
+        android:layout_marginLeft="73dp"
+        android:layout_marginEnd="73dp"
+        android:layout_marginRight="73dp"
         android:background="@drawable/sombra_txt"
         android:ems="10"
         android:gravity="center"
@@ -130,6 +117,50 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/userx" />
+
+    <EditText
+        android:id="@+id/userx"
+        android:layout_width="245dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="73dp"
+        android:layout_marginLeft="73dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="73dp"
+        android:layout_marginRight="73dp"
+        android:background="@drawable/sombra_txt"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/textUsuario"
+        android:inputType="textPersonName"
+        android:textColor="#ffff"
+        android:textColorHint="@color/common_google_signin_btn_text_dark_pressed"
+        android:textIsSelectable="false"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/correoxx"
+        android:layout_width="245dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/clave"
+        android:layout_marginStart="73dp"
+        android:layout_marginLeft="73dp"
+        android:layout_marginEnd="73dp"
+        android:layout_marginRight="73dp"
+        android:background="@drawable/sombra_txt"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/textCorreo"
+        android:inputType="textPersonName"
+        android:textColor="@color/common_google_signin_btn_text_dark_pressed"
+        android:textColorHint="@color/common_google_signin_btn_text_dark_pressed"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clave" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
