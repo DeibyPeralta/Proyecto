@@ -48,6 +48,13 @@ public class FragmentNavigation extends Fragment {
             }
         });
 
+        cardParques = vista.findViewById(R.id.parquesCard);
+        cardParques.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(view).navigate(R.id.fragmentParques);
+            }
+        });
 
         return vista;
     }

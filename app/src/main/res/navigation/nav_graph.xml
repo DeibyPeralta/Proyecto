@@ -18,6 +18,9 @@
         <action
             android:id="@+id/action_fragmentNavigation2_to_fragmentSitios"
             app:destination="@id/fragmentSitios" />
+        <action
+            android:id="@+id/action_fragmentNavigation2_to_fragmentParques"
+            app:destination="@id/fragmentParques" />
     </fragment>
     <fragment
         android:id="@+id/fragmentCaminatas3"
@@ -141,5 +144,62 @@
         <action
             android:id="@+id/action_blankGobernacion_to_fragmentNadar2"
             app:destination="@id/fragmentNadar2" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentParques"
+        android:name="com.example.proyecto.fragments.FragmentParques"
+        android:label="fragment_parques"
+        tools:layout="@layout/fragment_parques" >
+        <action
+            android:id="@+id/action_fragmentParques_to_fragmentNavigation2"
+            app:destination="@id/fragmentNavigation2" />
+        <action
+            android:id="@+id/action_fragmentParques_to_blankHelado"
+            app:destination="@id/blankHelado" />
+        <action
+            android:id="@+id/action_fragmentParques_to_blankLeyendaVallenata"
+            app:destination="@id/blankLeyendaVallenata" />
+        <action
+            android:id="@+id/action_fragmentParques_to_blankNovalito"
+            app:destination="@id/blankNovalito" />
+        <action
+            android:id="@+id/action_fragmentParques_to_blankCortijos"
+            app:destination="@id/blankCortijos" />
+    </fragment>
+    <fragment
+        android:id="@+id/blankHelado"
+        android:name="com.example.proyecto.fragments.parques.BlankHelado"
+        android:label="fragment_blank_helado"
+        tools:layout="@layout/fragment_blank_helado" >
+        <action
+            android:id="@+id/action_blankHelado_to_fragmentParques"
+            app:destination="@id/fragmentParques" />
+    </fragment>
+    <fragment
+        android:id="@+id/blankLeyendaVallenata"
+        android:name="com.example.proyecto.fragments.parques.BlankLeyendaVallenata"
+        android:label="fragment_blank_leyenda_vallenata"
+        tools:layout="@layout/fragment_blank_leyenda_vallenata" >
+        <action
+            android:id="@+id/action_blankLeyendaVallenata_to_fragmentParques"
+            app:destination="@id/fragmentParques" />
+    </fragment>
+    <fragment
+        android:id="@+id/blankNovalito"
+        android:name="com.example.proyecto.fragments.parques.BlankNovalito"
+        android:label="fragment_blank_novalito"
+        tools:layout="@layout/fragment_blank_novalito" >
+        <action
+            android:id="@+id/action_blankNovalito_to_fragmentParques"
+            app:destination="@id/fragmentParques" />
+    </fragment>
+    <fragment
+        android:id="@+id/blankCortijos"
+        android:name="com.example.proyecto.fragments.parques.BlankCortijos"
+        android:label="fragment_blank_cortijos"
+        tools:layout="@layout/fragment_blank_cortijos" >
+        <action
+            android:id="@+id/action_blankCortijos_to_fragmentParques"
+            app:destination="@id/fragmentParques" />
     </fragment>
 </navigation>
