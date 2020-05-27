@@ -9,63 +9,20 @@
     tools:context=".Registrarse">
 
 
-<<<<<<< HEAD
-    <EditText
-        android:id="@+id/correoxx"
-        android:layout_width="245dp"
-        android:layout_height="50dp"
-        android:layout_above="@+id/clave"
-        android:layout_centerInParent="true"
-        android:layout_marginStart="59dp"
-        android:layout_marginLeft="59dp"
-        android:layout_marginEnd="87dp"
-        android:layout_marginRight="87dp"
-        android:background="@drawable/sombra_txt"
-        android:ems="10"
-        android:gravity="center"
-        android:hint="@string/textCorreo"
-        android:inputType="textPersonName"
-        android:textColor="@color/common_google_signin_btn_text_dark_pressed"
-        android:textColorHint="@color/common_google_signin_btn_text_dark_pressed"
-        android:textStyle="italic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/clave" />
-
-    <Button
-        android:id="@+id/logear"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-=======
     <Button
         android:id="@+id/logear"
         android:layout_width="172dp"
         android:layout_height="44dp"
->>>>>>> deiby
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-<<<<<<< HEAD
-        android:layout_marginStart="124dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="125dp"
-=======
-        android:layout_marginStart="109dp"
-        android:layout_marginLeft="109dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="110dp"
-        android:layout_marginRight="110dp"
->>>>>>> deiby
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/boton_redondo"
         android:text="@string/cuenta"
         android:textColor="@color/common_google_signin_btn_text_dark_pressed"
-        app:layout_constraintEnd_toEndOf="parent"
-<<<<<<< HEAD
-=======
-        app:layout_constraintHorizontal_bias="0.0"
->>>>>>> deiby
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/registrarse" />
 
@@ -80,11 +37,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="108dp"
         android:layout_marginLeft="108dp"
-<<<<<<< HEAD
         android:layout_marginTop="32dp"
-=======
-        android:layout_marginTop="20dp"
->>>>>>> deiby
         android:layout_marginEnd="108dp"
         android:layout_marginRight="108dp"
         android:background="@drawable/boton_redondo"
