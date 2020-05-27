@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/riox"
     tools:context=".MainActivity">
 
     <Button
@@ -24,10 +25,9 @@
 
     <Button
         android:id="@+id/hacer"
-        android:layout_width="100dp"
-        android:layout_height="40dp"
+        android:layout_width="110dp"
+        android:layout_height="43dp"
         android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
         android:layout_marginBottom="112dp"
         android:background="@drawable/boton_redondo"
         android:onClick="queHacer"

@@ -4,9 +4,9 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import com.example.proyecto.utilidades.utilidadesGuardar;
-
 import androidx.annotation.Nullable;
+
+import com.example.proyecto.utilidades.dbUtilidades;
 
 public class conexionSQLiteHelper extends SQLiteOpenHelper {
     public conexionSQLiteHelper(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
@@ -15,7 +15,7 @@ public class conexionSQLiteHelper extends SQLiteOpenHelper {
 
     @Override// genera las tablas
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL(utilidadesGuardar.Create_Table_Usuario);
+        db.execSQL(dbUtilidades.Create_Table_Usuario);
     }
 
     @Override// verifica que no exista una version de la db

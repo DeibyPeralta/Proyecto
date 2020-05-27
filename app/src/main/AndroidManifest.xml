@@ -35,7 +35,7 @@
 
         <activity
             android:name=".MapsDondeEstoy"
-            android:label="@string/title_activity_maps_donde_estoy"></activity>
+            android:label="maps donde estoy"></activity>
         <activity android:name=".visitar" />
         <activity
             android:name=".QueHacer"

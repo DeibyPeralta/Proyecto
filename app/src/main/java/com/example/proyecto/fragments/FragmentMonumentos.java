@@ -10,6 +10,7 @@ import androidx.navigation.Navigation;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.example.proyecto.R;
 import com.getbase.floatingactionbutton.FloatingActionButton;
@@ -93,7 +94,7 @@ public class FragmentMonumentos extends Fragment {
             }
         });
 
-        cacique = vista.findViewById(R.id.eccehomo);
+        cacique = vista.findViewById(R.id.cacique);
         cacique.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

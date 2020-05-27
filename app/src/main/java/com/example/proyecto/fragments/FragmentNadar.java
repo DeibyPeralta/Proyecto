@@ -9,6 +9,7 @@ import androidx.navigation.Navigation;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.example.proyecto.R;
 
@@ -51,7 +52,7 @@ public class FragmentNadar extends Fragment {
     }
 
     View vista;
-    CardView Plaza, poporos, eccehomo, cacique;
+    CardView plaza, loperena, mayo, gobernacion;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -59,14 +60,37 @@ public class FragmentNadar extends Fragment {
 
         vista = inflater.inflate(R.layout.fragment_nadar, container, false);
 
-        Plaza = vista.findViewById(R.id.monumentosCard);
-        Plaza.setOnClickListener(new View.OnClickListener() {
+        plaza = vista.findViewById(R.id.plazaAl);
+        plaza.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Navigation.findNavController(view).navigate(R.id.blankPlaza);
             }
         });
-        
+
+        loperena = vista.findViewById(R.id.loperena);
+        loperena.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(view).navigate(R.id.blankLoperena);
+            }
+        });
+
+        mayo = vista.findViewById(R.id.mayoPlaza);
+        mayo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(view).navigate(R.id.blankMayo);
+            }
+        });
+
+        gobernacion = vista.findViewById(R.id.gobernacion);
+        gobernacion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(view).navigate(R.id.blankGobernacion);
+            }
+        });
         return vista;
     }
 }

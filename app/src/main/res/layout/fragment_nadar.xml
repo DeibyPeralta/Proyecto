@@ -22,7 +22,7 @@
         tools:ignore="MissingConstraints">
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/monumentosCard"
+            android:id="@+id/plazaAl"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="25dp"
@@ -60,7 +60,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/eccehomo"
+            android:id="@+id/loperena"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="45dp"
@@ -83,14 +83,14 @@
                     android:layout_height="55dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="5dp"
-                    android:src="@drawable/ecceomo" />
+                    android:src="@drawable/loperena" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_centerHorizontal="true"
                     android:layout_gravity="center_horizontal"
-                    android:text="Santo Ecce Homo"
+                    android:text="@string/loperena"
                     android:textAlignment="center"
                     android:textColor="#F61313"
                     android:textSize="16sp"
@@ -100,7 +100,7 @@
 
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/poporos"
+            android:id="@+id/mayoPlaza"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="25dp"
@@ -122,14 +122,14 @@
                     android:layout_height="55dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="5dp"
-                    android:src="@drawable/poporos" />
+                    android:src="@drawable/mayo" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_centerHorizontal="true"
                     android:layout_gravity="center_horizontal"
-                    android:text="@string/poporos"
+                    android:text="@string/mayo"
                     android:textAlignment="center"
                     android:textColor="#F61313"
                     android:textSize="16sp"
@@ -138,8 +138,9 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/gobernacion"
             android:layout_width="wrap_content"
-            android:layout_height="80dp"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="45dp"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="15dp"
@@ -160,14 +161,14 @@
                     android:layout_height="55dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="5dp"
-                    android:src="@drawable/cacique2" />
+                    android:src="@drawable/gobernacion" />
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="38dp"
                     android:layout_centerHorizontal="true"
                     android:layout_gravity="center_horizontal"
-                    android:text="@string/cacique"
+                    android:text="@string/gobernacion"
                     android:textAlignment="center"
                     android:textColor="#F61313"
                     android:textSize="16sp"

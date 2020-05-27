@@ -46,13 +46,20 @@
     //sitios insignes
     <string name="plaza">Plaza Alfonso Lopez</string>
     <string name="plaza2">Es la Plaza fundacional de la ciudad. Sede de la famosa Tarima Francisco el hombre y cuna del Festival de la leyenda vallenata, que se celebró allí por varias décadas hasta que fue insuficiente para alojar a los turistas que nos visitaban. Al recorrer las casas que la rodean podrás conocer la historia de la ciudad, leyendo las placas en cada una de ellas. Sus lozas, desde lo alto, representan los caminos de la vida de la cosmogonía arhuaca. Actualmente está siendo remodelada por la alcaldía municipal.</string>
+    <string name="loperena">Colegio Loperena</string>
+    <string name="loperena2">Fue creado como homenaje a la memoria de la heroína vallenata Doña María Concepción Loperena de Fernández de Castro, quien prestó servicios invaluables a la independencia de la República. Reconocida como el "Alma mater del Cesar" por haber formado en sus aulas a la mayoría de los dirigentes del Departamento en el siglo XX. En 1993, las instalaciones del Colegio Nacional Loperena fueron declaradas Monumento Nacional de Colombia.
+Se necesita un permiso especial para entrar desde las 8:00 hasta las 18:00 horas.</string>
+    <string name="mayo">Plaza primero de Mayo</string>
+    <string name="mayo2">Es un parque donde se puede disfrutar, divertirse y jugar. Es un atractivo para niños y adultos por igual. Aquí se hacen conciertos ya que cuenta con una tarima amplia y un gran espacio. Además, allí se encuentra el monumento de las guitarras. Este fue instalado el 8 de febrero de 2009 y son un homenaje a las fiestas del barrio que inician justamente el día después de finalizar el festival vallenato.
+Espacio público.</string>
+    <string name="gobernacion">Gobernacion del Cesar</string>
+    <string name="gobernacion2">La plaza cuenta con un parque de banderas que tiene 27 astas de 27 metros de altura en las que ondean las banderas de cada uno de los municipios del departamento del Cesar y la de Colombia. Esta recién reformada plaza es un espacio verde de esparcimiento que cuenta con varios monumentos que representan la idiosincrasia de la región.
+Espacio público.</string>
 
     //lugares
     <string name="parqueHelado">Lugar en donde se le rinde homenaje a Carlos Vives como embajador de nuestra cultura y folclor,quien también es el padrino de este bello lugar. Estará ubicado en donde es hoy el parque del Helado. Estará conectado a la glorieta de los Juglares y tendrá fuentes de agua. El avión DC6, parqueado allí para disfrute de los niños, se convertirá en un museo de la vida y obra de este gran artista.</string>
 
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
-
-=======
-    <string name="title_activity_maps_donde_estoy">Map</string>
->>>>>>> deiby
 </resources>

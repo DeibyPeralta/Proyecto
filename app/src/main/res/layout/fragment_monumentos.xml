@@ -10,12 +10,12 @@
 
     <androidx.gridlayout.widget.GridLayout
         android:id="@+id/gridLayout"
-        android:layout_width="396dp"
-        android:layout_height="297dp"
-        android:layout_marginTop="364dp"
+        android:layout_width="392dp"
+        android:layout_height="261dp"
+        android:layout_marginTop="352dp"
         app:columnCount="2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.157"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:rowCount="3"
@@ -138,6 +138,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cacique"
             android:layout_width="wrap_content"
             android:layout_height="80dp"
             android:layout_marginLeft="45dp"

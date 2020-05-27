@@ -6,25 +6,15 @@ import android.content.ContentValues;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ListView;
 import android.widget.Toast;
 
-import com.example.proyecto.utilidades.utilidadesGuardar;
-import com.example.proyecto.baseDatos.dbUsuarios;
 import com.example.proyecto.utilidades.dbUtilidades;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 
 public class Registrarse extends AppCompatActivity {
 
@@ -48,6 +38,7 @@ public class Registrarse extends AppCompatActivity {
         correo = findViewById(R.id.correoxx);
 
         loginUsuario = findViewById(R.id.logear);
+        registrarUsuario = findViewById(R.id.registrarse);
 
         registrarUsuario.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,7 +69,7 @@ public class Registrarse extends AppCompatActivity {
         });
     }
 
-public void RegistrarUsers(View view){
+public void RegistrarUsers(){
     conexionSQLiteHelper conexion = new conexionSQLiteHelper(this, "db_usuario", null, 1);
     SQLiteDatabase baseDatos = conexion.getWritableDatabase();
 
@@ -89,14 +80,14 @@ public void RegistrarUsers(View view){
     if ( !name.isEmpty() && !mail.isEmpty() && !pass.isEmpty() ){
             ContentValues registro = new ContentValues();
 
-            registro.put(utilidadesGuardar.usuario, name);
-            registro.put(utilidadesGuardar.correo, mail);
-            registro.put(utilidadesGuardar.contraseña, pass);
+            registro.put(dbUtilidades.usuario, name);
+            registro.put(dbUtilidades.correo, mail);
+            registro.put(dbUtilidades.contraseña, pass);
 
             if ( buscarDatos() == true || valiCorreo() == true){
                 Toast.makeText(this, "Usuario ya registrado", Toast.LENGTH_SHORT).show();
             }else{
-                Long idResultado = baseDatos.insert(utilidadesGuardar.tabla_usuario, null, registro);
+               Long idResultado = baseDatos.insert(dbUtilidades.tabla_usuario, null, registro);
 
                 if( idResultado == -1) Toast.makeText(this, "Error with inserting users", Toast.LENGTH_SHORT).show();
                 else Toast.makeText(this, "users created", Toast.LENGTH_SHORT).show();
@@ -106,39 +97,15 @@ public void RegistrarUsers(View view){
     }
 }
 
-   private void RegistrarUsers(){
-       conexxionSQLiteHelper conexxion = new conexxionSQLiteHelper(this, "db_usuario", null, 1);
-       SQLiteDatabase baseDatos = conexxion.getWritableDatabase();
-
-       ContentValues registro = new ContentValues();
-
-       registro.put(dbUtilidades.campo_nombre, name);
-       registro.put(dbUtilidades.campo_correo, mail);
-       registro.put(dbUtilidades.campo_password, pass);
-
-       long idResultado = baseDatos.insert(dbUtilidades.tabla_usuario, null, registro);
-
-       if( idResultado == -1) Toast.makeText(this, "Error with inserting users", Toast.LENGTH_SHORT).show();
-       else Toast.makeText(this, "users created", Toast.LENGTH_SHORT).show();
-
-       baseDatos.close();
-
-       usuario.setText("");
-       correo.setText("");
-       clave.setText("");
-   }
-
-
-
 public boolean buscarDatos(){
     conexionSQLiteHelper conexion = new conexionSQLiteHelper(this, "db_usuario", null, 1);
     SQLiteDatabase baseDatos = conexion.getWritableDatabase();
 
     String[] parametros = { usuario.getText().toString() };
-    String[] campos = {utilidadesGuardar.usuario, utilidadesGuardar.correo, utilidadesGuardar.contraseña};
+    String[] campos = {dbUtilidades.usuario, dbUtilidades.correo, dbUtilidades.contraseña};
 
     try {
-        Cursor cursorBuscador= baseDatos.query(utilidadesGuardar.tabla_usuario, campos, utilidadesGuardar.usuario +"=?", parametros, null, null, null);
+        Cursor cursorBuscador= baseDatos.query(dbUtilidades.tabla_usuario, campos, dbUtilidades.usuario +"=?", parametros, null, null, null);
         cursorBuscador.moveToFirst();
 
         if ( !cursorBuscador.getString(0).isEmpty() ){
@@ -156,10 +123,10 @@ public boolean valiCorreo(){
     SQLiteDatabase baseDatos = conexion.getWritableDatabase();
 
     String[] parametros = { correo.getText().toString() };
-    String[] campos = {utilidadesGuardar.usuario, utilidadesGuardar.correo, utilidadesGuardar.contraseña};
+    String[] campos = {dbUtilidades.usuario, dbUtilidades.correo, dbUtilidades.contraseña};
 
     try {
-        Cursor cursorBuscador= baseDatos.query(utilidadesGuardar.tabla_usuario, campos, utilidadesGuardar.correo +"=?", parametros, null, null, null);
+        Cursor cursorBuscador= baseDatos.query(dbUtilidades.tabla_usuario, campos, dbUtilidades.correo +"=?", parametros, null, null, null);
         cursorBuscador.moveToFirst();
 
         if ( !cursorBuscador.getString(0).isEmpty() ){

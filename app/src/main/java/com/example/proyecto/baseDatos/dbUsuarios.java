@@ -4,13 +4,11 @@ import java.io.Serializable;
 
 public class dbUsuarios {
 
-//    private Integer id;
     private String nameUsuario;
     private String correo;
     private String password;
 
-    public dbUsuarios(int id, String nameUsuario, String correo, String password) {
-  //      this.id = id;
+    public dbUsuarios(String nameUsuario, String correo, String password) {
         this.nameUsuario = nameUsuario;
         this.correo = correo;
         this.password = password;
@@ -20,14 +18,6 @@ public class dbUsuarios {
 
     }
 
-/*
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }*/
 
     public String getNameUsuario() {
         return nameUsuario;

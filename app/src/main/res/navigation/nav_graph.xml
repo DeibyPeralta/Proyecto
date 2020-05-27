@@ -51,6 +51,15 @@
         <action
             android:id="@+id/action_fragmentNadar2_to_blankPlaza"
             app:destination="@id/blankPlaza" />
+        <action
+            android:id="@+id/action_fragmentNadar2_to_blankLoperena"
+            app:destination="@id/blankLoperena" />
+        <action
+            android:id="@+id/action_fragmentNadar2_to_blankMayo"
+            app:destination="@id/blankMayo" />
+        <action
+            android:id="@+id/action_fragmentNadar2_to_blankGobernacion"
+            app:destination="@id/blankGobernacion" />
     </fragment>
     <fragment
         android:id="@+id/fragmentSitios"
@@ -104,6 +113,33 @@
         tools:layout="@layout/fragment_blank_plaza" >
         <action
             android:id="@+id/action_blankPlaza_to_fragmentNadar2"
+            app:destination="@id/fragmentNadar2" />
+    </fragment>
+    <fragment
+        android:id="@+id/blankLoperena"
+        android:name="com.example.proyecto.fragments.sitiosInsignes.BlankLoperena"
+        android:label="fragment_blank_loperena"
+        tools:layout="@layout/fragment_blank_loperena" >
+        <action
+            android:id="@+id/action_blankLoperena_to_fragmentNadar2"
+            app:destination="@id/fragmentNadar2" />
+    </fragment>
+    <fragment
+        android:id="@+id/blankMayo"
+        android:name="com.example.proyecto.fragments.sitiosInsignes.BlankMayo"
+        android:label="fragment_blank_mayo"
+        tools:layout="@layout/fragment_blank_mayo" >
+        <action
+            android:id="@+id/action_blankMayo_to_fragmentNadar2"
+            app:destination="@id/fragmentNadar2" />
+    </fragment>
+    <fragment
+        android:id="@+id/blankGobernacion"
+        android:name="com.example.proyecto.fragments.sitiosInsignes.BlankGobernacion"
+        android:label="fragment_blank_gobernacion"
+        tools:layout="@layout/fragment_blank_gobernacion" >
+        <action
+            android:id="@+id/action_blankGobernacion_to_fragmentNadar2"
             app:destination="@id/fragmentNadar2" />
     </fragment>
 </navigation>

@@ -6,15 +6,10 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-
-import com.example.proyecto.baseDatos.baseDatos;
-import com.example.proyecto.utilidades.utilidadesGuardar;
-
-import java.util.ArrayList;
+import com.example.proyecto.utilidades.dbUtilidades;
 
 public class Login extends AppCompatActivity {
 
@@ -59,10 +54,10 @@ public void buscarDatos(View view){
 public boolean valiPass(){
     SQLiteDatabase baseDatosx = conexxion.getWritableDatabase();
     String[] parametros = {clave.getText().toString() };
-    String[] campos = {utilidadesGuardar.usuario, utilidadesGuardar.correo, utilidadesGuardar.contraseña};
+    String[] campos = {dbUtilidades.usuario, dbUtilidades.correo, dbUtilidades.contraseña};
 
     try {
-        Cursor cursorBuscador= baseDatosx.query(utilidadesGuardar.tabla_usuario, campos, utilidadesGuardar.contraseña +"=?", parametros, null, null, null);
+        Cursor cursorBuscador= baseDatosx.query(dbUtilidades.tabla_usuario, campos, dbUtilidades.contraseña +"=?", parametros, null, null, null);
 
         cursorBuscador.moveToFirst();
         if ( !cursorBuscador.getString(0).isEmpty() ){
@@ -78,10 +73,10 @@ public boolean valiPass(){
 public boolean valiUsu(){
     SQLiteDatabase baseDatosx = conexxion.getWritableDatabase();
     String[] parametros = {usuariosx.getText().toString() };
-    String[] campos = {utilidadesGuardar.usuario, utilidadesGuardar.correo, utilidadesGuardar.contraseña};
+    String[] campos = {dbUtilidades.usuario, dbUtilidades.correo, dbUtilidades.contraseña};
 
     try {
-        Cursor cursorBuscador= baseDatosx.query(utilidadesGuardar.tabla_usuario, campos, utilidadesGuardar.usuario +"=?", parametros, null, null, null);
+        Cursor cursorBuscador= baseDatosx.query(dbUtilidades.tabla_usuario, campos, dbUtilidades.usuario +"=?", parametros, null, null, null);
 
         cursorBuscador.moveToFirst();
         if ( !cursorBuscador.getString(0).isEmpty() ){
