@@ -65,4 +65,17 @@ Public space.</string>
     <string name="cortijos">Cortijos Park</string>
     <string name="cortijos2">Recreation place that has tennis courts, beach volleyball, synthetic soccer, bio-healthy park, basketball courts and multifunctional. It also has wide green spaces to delight in cool shades. This sunny landscape that always bathes the city, attracts many visitors to the park all the time.Public space.</string>
 
+    //fiestas
+    <string name="candelaria">Patronal Festival of La Candelaria</string>
+
+    <string name="SanJuan">Patronal of San Juan Bosco</string>
+
+    <string name="acordeon">My Accordion Piece Festival</string>
+
+    <string name="ganadera">Valledupar livestock fair</string>
+
+    <string name="festival">Vallenata Legend Festival</string>
+
+    <string name="cafe">Arhuaca Coffee and Backpack Festival</string>
+
 </resources>

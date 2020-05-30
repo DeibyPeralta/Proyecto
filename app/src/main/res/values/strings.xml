@@ -63,5 +63,19 @@ Espacio público.</string>
     <string name="cortijos">Parque los Cortijos</string>
     <string name="cortijos2">Lugar de esparcimiento que cuenta con canchas de tenis, Voley playa, futbol sintético, parque bio-saludable, canchas de baloncesto y multifuncional. También tiene amplios espacios verdes para deleitarse en frescas sombras. Este paisaje de sol que siempre baña la ciudad, atrae a muchos visitantes al parque todo el tiempo.Espacio público.</string>
 
+    //fiestas
+    <string name="candelaria">Fiesta Patronal de la Candelaria</string>
 
+    <string name="SanJuan">Patronal de San Juan Bosco</string>
+
+    <string name="acordeon">Festival Mi Pedazo de Acordeón</string>
+
+    <string name="ganadera">Feria ganadera de Valledupar</string>
+
+    <string name="festival">Festival de la leyenda Vallenata</string>
+
+    <string name="cafe">Festival del Café y de la Mochila Arhuaca</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

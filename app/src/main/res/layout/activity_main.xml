@@ -9,114 +9,260 @@
     android:background="@drawable/riox"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/region"
-        android:layout_width="wrap_content"
-        android:layout_height="38dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="12dp"
-        android:background="@drawable/boton_redondo"
-        android:text="@string/region"
-        android:textColor="#ffff"
-        app:layout_constraintBottom_toTopOf="@+id/fiestas"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:ignore="MissingConstraints" />
 
-    <Button
-        android:id="@+id/hacer"
-        android:layout_width="110dp"
-        android:layout_height="43dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginBottom="112dp"
-        android:background="@drawable/boton_redondo"
-        android:onClick="queHacer"
-        android:text="@string/hacer"
-        android:textColor="#ffff"
+    <androidx.gridlayout.widget.GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="16dp"
+        android:padding="3dp"
+        app:columnCount="3"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints" />
+        app:rowCount="3"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-16dp">
 
-    <Button
-        android:id="@+id/Eventos"
-        android:layout_width="100dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginBottom="8dp"
-        android:background="@drawable/boton_redondo"
-        android:onClick="eventos"
-        android:text="@string/eventos"
-        android:textColor="#ffff"
-        app:layout_constraintBottom_toTopOf="@+id/hacer"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints" />
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardRegion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="5dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="6dp"
+            app:layout_column="0"
+            app:layout_row="0">
 
-    <Button
-        android:id="@+id/logear"
-        android:layout_width="149dp"
-        android:layout_height="38dp"
-        android:layout_marginEnd="131dp"
-        android:layout_marginRight="131dp"
-        android:layout_marginBottom="52dp"
-        android:background="@drawable/boton_redondo"
-        android:gravity="center"
-        android:onClick="login"
-        android:text="@string/iniciarSesion"
-        android:textColor="#ffff"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:ignore="MissingConstraints" />
+            <LinearLayout
+                android:layout_width="114dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:orientation="vertical"
+                android:background="#42000000">
 
-     <Button
-        android:id="@+id/fiestas"
-        android:layout_width="wrap_content"
-        android:layout_height="38dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="112dp"
-        android:background="@drawable/boton_redondo"
-        android:text="@string/fiestas"
-        android:textColor="#ffff"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:ignore="MissingConstraints" />
+                <ImageView
+                    android:id="@+id/imagenx"
+                    android:layout_width="90dp"
+                    android:layout_height="55dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/region" />
 
-    <Button
-        android:id="@+id/centros"
-        android:layout_width="118dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="112dp"
-        android:background="@drawable/boton_redondo"
-        android:text="@string/recreacion"
-        android:textColor="#ffff"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/fiestas"
-        app:layout_constraintHorizontal_bias="0.511"
-        app:layout_constraintStart_toEndOf="@+id/hacer"
-        tools:ignore="MissingConstraints" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Hospedaje"
+                    android:textAlignment="center"
+                    android:textColor="#ffff"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
-    <Button
-        android:id="@+id/turismo"
-        android:layout_width="118dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="8dp"
-        android:background="@drawable/boton_redondo"
-        android:onClick="visitar"
-        android:text="@string/visitar"
-        android:textColor="#ffff"
-        app:layout_constraintBottom_toTopOf="@+id/centros"
-        app:layout_constraintEnd_toStartOf="@+id/region"
-        app:layout_constraintHorizontal_bias="0.511"
-        app:layout_constraintStart_toEndOf="@+id/Eventos"
-        tools:ignore="MissingConstraints" />
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardHacer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="6dp"
+            app:layout_column="1"
+            app:layout_row="0">
+
+            <LinearLayout
+                android:layout_width="114dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:background="#42000000"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imagen2x"
+                    android:layout_width="90dp"
+                    android:layout_height="55dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/hacer" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/hacer"
+                    android:textAlignment="center"
+                    android:textColor="#ffff"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardEventos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="5dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="6dp"
+            app:layout_column="2"
+            app:layout_row="0">
+
+            <LinearLayout
+                android:layout_width="114dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:background="#42000000"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imagen3x"
+                    android:layout_width="90dp"
+                    android:layout_height="55dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/eventos" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/eventos"
+                    android:textAlignment="center"
+                    android:textColor="#ffff"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardFiestas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="5dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="6dp"
+            app:layout_column="0"
+            app:layout_row="1">
+
+            <LinearLayout
+                android:layout_width="114dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:background="#42000000"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imagen"
+                    android:layout_width="90dp"
+                    android:layout_height="55dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/fiestas" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/fiestas"
+                    android:textAlignment="center"
+                    android:textColor="#ffff"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardRecreo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="6dp"
+            app:layout_column="1"
+            app:layout_row="1">
+
+            <LinearLayout
+                android:layout_width="114dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:background="#42000000"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imagen2"
+                    android:layout_width="90dp"
+                    android:layout_height="55dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/recreacion" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/recreacion"
+                    android:textAlignment="center"
+                    android:textColor="#ffff"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardVisitar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="5dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="6dp"
+            app:layout_column="2"
+            app:layout_row="1">
+
+            <LinearLayout
+                android:layout_width="114dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:background="#42000000"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imagen3"
+                    android:layout_width="90dp"
+                    android:layout_height="55dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/visitar" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/visitar"
+                    android:textAlignment="center"
+                    android:textColor="#ffff"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </androidx.gridlayout.widget.GridLayout>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
