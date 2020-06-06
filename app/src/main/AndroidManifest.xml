@@ -19,7 +19,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".EventosRegion"></activity>
+        <activity android:name=".vistaEventos.candelaria"></activity>
+        <activity android:name=".EventosRegion" />
         <activity android:name=".inicio" />
         <activity
             android:name=".splash"

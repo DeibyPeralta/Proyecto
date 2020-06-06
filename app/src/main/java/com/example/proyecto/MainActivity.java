@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         eventos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent visitar = new Intent(MainActivity.this, EventosRegion.class);
+                Intent visitar = new Intent(MainActivity.this, visitar.class);
                 startActivity(visitar);
             }
         });
@@ -82,8 +82,7 @@ public class MainActivity extends AppCompatActivity {
         visitar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent visitar = new Intent(MainActivity.this, visitar.class);
-                startActivity(visitar);
+                Toast.makeText(MainActivity.this, "Falta agregarle botones y estos que lleven a los pueblos", Toast.LENGTH_SHORT).show();
             }
         });
 

@@ -17,10 +17,12 @@ public class inicio extends AppCompatActivity {
     public void login(View view){
         Intent actividad_uno = new Intent(this, Login.class);
         startActivity(actividad_uno);
+        finish();
     }
 
     public void invitado(View view){
         Intent invitadox = new Intent(this, MainActivity.class);
         startActivity(invitadox);
+        finish();
     }
 }

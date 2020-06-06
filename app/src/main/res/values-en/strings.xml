@@ -67,15 +67,23 @@ Public space.</string>
 
     //fiestas
     <string name="candelaria">Patronal Festival of La Candelaria</string>
+    <string name="candelaria2">This festival takes place during the month of February, in the municipality of Becerril.</string>
 
     <string name="SanJuan">Patronal of San Juan Bosco</string>
+    <string name="SanJuan2">Celebration and veneration of the patron saint of the municipality of Bosconia, San Juan Bosco. January 31 begins with a musical dawn.</string>
 
     <string name="acordeon">My Accordion Piece Festival</string>
+    <string name="acordeon2">It is celebrated in the municipality of El Paso. The organizing board of this festival created this event to pay tribute each year to the composer and musician that no one forgets: Alejandro Durán.</string>
 
     <string name="ganadera">Valledupar livestock fair</string>
+    <string name="ganadera2">It is generally celebrated in the month of August. Cesar is considered an eminently agricultural and livestock region.</string>
 
     <string name="festival">Vallenata Legend Festival</string>
+    <string name="festival2">The Vallenata Legend Festival is celebrated in the city of Valledupar generally during the month of April.</string>
 
     <string name="cafe">Arhuaca Coffee and Backpack Festival</string>
+    <string name="cafe2">It is celebrated in the municipality of Pueblo Bello in the month of July.</string>
+
+
 
 </resources>

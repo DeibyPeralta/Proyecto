@@ -1,6 +1,7 @@
 package com.example.proyecto.fragments;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -10,8 +11,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
-
 import com.example.proyecto.R;
 import com.example.proyecto.adaptadores.adaptadorVisitar;
 import com.example.proyecto.informacionPrueba.informacion;
@@ -19,6 +18,7 @@ import com.example.proyecto.informacionPrueba.informacion;
 import java.util.ArrayList;
 
 import com.example.proyecto.interfaxex.IComunicaFragments;
+import com.example.proyecto.vistaEventos.candelaria;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -88,10 +88,13 @@ public class EventosFragment extends Fragment {
         adapter.setOnClicListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getContext(), "Seleccionaste: "+listaInformacion.get(recyclerPersonajes.getChildAdapterPosition(v)).getNombre(), Toast.LENGTH_SHORT).show();
+                if(listaInformacion.get(recyclerPersonajes.getChildAdapterPosition(v)).getNombre().equals(getString(R.string.candelaria))){
+                    Intent candelar = new Intent(getContext(), candelaria.class);
+                    startActivity(candelar);
+                }else if(listaInformacion.get(recyclerPersonajes.getChildAdapterPosition(v)).getNombre().equals(getString(R.string.SanJuan))){
 
-                // envio detalles por medio de interfacecomuncation
-              //  interfaceComunicaFragments.enviarPersonajes(listaInformacion.get(recyclerPersonajes.getChildAdapterPosition(v)));
+                }
+
             }
         });
 
@@ -101,14 +104,14 @@ public class EventosFragment extends Fragment {
 
 
     private void llenarListaPersonajes() {
-        listaInformacion.add(new informacion("Chemesquemena", "Es uno de los 26 corregimientos del municipio colombiano de Valledupar y una de las comunidades que integran el Resguardo indígena Kankuamo, ubicada al norte, en la parte alta de las montañas de la Sierra Nevada de Santa Marta, en el departamento del Cesar", R.drawable.chemesquemena));
-        listaInformacion.add(new informacion("Atanquez", "Es una de las doce comunidades que integran el Resguardo Indígena Kankuamo, Se encuentra ubicada en la vertiente suroriental de la Sierra Nevada de Santa Marta, en el departamento del Cesar", R.drawable.atanquez));
-        listaInformacion.add(new informacion("La mina", "La Mina es uno de los 26 corregimientos del municipio colombiano de Valledupar, en el departamento del Cesar.", R.drawable.la_mina));
+        listaInformacion.add(new informacion(getString(R.string.candelaria), getString(R.string.candelaria2), R.drawable.candelaria));
+        listaInformacion.add(new informacion(getString(R.string.SanJuan), getString(R.string.SanJuan2), R.drawable.sanjuan));
+        listaInformacion.add(new informacion(getString(R.string.acordeon), getString(R.string.acordeon2), R.drawable.acordeon));
         // para mostrar mas solo copy paste
 
-        listaInformacion.add(new informacion("Chemesquemena", "Es uno de los 26 corregimientos del municipio colombiano de Valledupar y una de las comunidades que integran el Resguardo indígena Kankuamo, ubicada al norte, en la parte alta de las montañas de la Sierra Nevada de Santa Marta, en el departamento del Cesar", R.drawable.chemesquemena));
-        listaInformacion.add(new informacion("Atanquez", "Es una de las doce comunidades que integran el Resguardo Indígena Kankuamo, Se encuentra ubicada en la vertiente suroriental de la Sierra Nevada de Santa Marta, en el departamento del Cesar", R.drawable.atanquez));
-        listaInformacion.add(new informacion("La mina", "La Mina es uno de los 26 corregimientos del municipio colombiano de Valledupar, en el departamento del Cesar.", R.drawable.la_mina));
+        listaInformacion.add(new informacion(getString(R.string.ganadera), getString(R.string.ganadera), R.drawable.ganadera));
+        listaInformacion.add(new informacion(getString(R.string.festival), getString(R.string.festival2), R.drawable.leyenda));
+        listaInformacion.add(new informacion(getString(R.string.cafe), getString(R.string.cafe2), R.drawable.mochila));
     }
 
 
