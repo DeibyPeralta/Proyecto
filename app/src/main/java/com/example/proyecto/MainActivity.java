@@ -89,6 +89,11 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void estoy(View view){
+        Intent visitar = new Intent(this, EventosPrueba.class);
+        startActivity(visitar);
+    }
+
     public void ImagenButton(View view){
         Intent visitar = new Intent(this, EventosFragment.class);
         startActivity(visitar);

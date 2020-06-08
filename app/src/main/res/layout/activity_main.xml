@@ -269,6 +269,16 @@
 
     </androidx.gridlayout.widget.GridLayout>
 
+    <Button
+        android:id="@+id/dondeEstoy"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/estoy"
+        android:onClick="estoy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
