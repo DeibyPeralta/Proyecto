@@ -2,7 +2,7 @@ package com.example.proyecto.baseDatos;
 
 import java.io.Serializable;
 
-public class dbUsuarios {
+public class dbUsuarios implements Serializable{
 
     private String nameUsuario;
     private String correo;
