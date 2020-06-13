@@ -22,13 +22,13 @@
         tools:ignore="MissingConstraints">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:orientation="vertical">
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
@@ -51,6 +51,14 @@
                     tools:ignore="MissingConstraints" />
             </LinearLayout>
 
+
+            <com.google.android.gms.maps.MapView
+                android:id="@+id/mapView"
+                android:layout_width="match_parent"
+                android:layout_height="169dp"
+                tools:layout_editor_absoluteX="147dp"
+                tools:layout_editor_absoluteY="147dp" />
+
             <TextView
                 android:id="@+id/textView3"
                 android:layout_width="411dp"
@@ -65,7 +73,6 @@
                 android:text="@string/candelaria2"
                 android:textColor="#0C0B0B"
                 android:textSize="20sp" />
-
         </LinearLayout>
     </ScrollView>
 
