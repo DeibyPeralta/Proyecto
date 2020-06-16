@@ -51,7 +51,7 @@ public class candelaria extends AppCompatActivity  implements OnMapReadyCallback
         LatLng upc = new LatLng(10.4483192,  -73.2620876);       // Add a marker in upc and move the camera
         map.addMarker(new MarkerOptions().position(upc).title("Marker"));
         map.getUiSettings().setZoomControlsEnabled(true);//habilitar zoom
-        map.moveCamera(CameraUpdateFactory.newLatLngZoom(upc, 20));// personalizar zoom
+        map.moveCamera(CameraUpdateFactory.newLatLngZoom(upc, 12));// personalizar zoom
 
     }
 
