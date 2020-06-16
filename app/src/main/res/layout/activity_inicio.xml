@@ -8,12 +8,10 @@
     tools:context=".inicio">
 
     <LinearLayout
-        android:layout_width="361dp"
-        android:layout_height="157dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="320dp"
-        android:layout_marginEnd="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical"
+        android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -21,29 +19,28 @@
         <Button
             android:id="@+id/login"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginRight="20dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
             android:background="@drawable/boton_redondo"
             android:onClick="login"
             android:text="Ingresar"
             android:textColor="#ffff"
-            android:textSize="30sp"
+            android:textSize="20sp"
             tools:ignore="MissingConstraints" />
 
         <Button
             android:id="@+id/invitado"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="30dp"
             android:layout_marginTop="15dp"
-            android:layout_marginRight="20dp"
+            android:layout_marginRight="30dp"
             android:background="@drawable/boton_solo_borde"
             android:onClick="invitado"
             android:text="Invitado"
             android:textColor="#ffff"
-            android:textSize="30sp"
+            android:textSize="20sp"
             tools:ignore="MissingConstraints" />
 
     </LinearLayout>
