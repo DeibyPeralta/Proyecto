@@ -13,14 +13,15 @@ import android.widget.ToggleButton;
 import com.example.proyecto.R;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class candelaria extends AppCompatActivity {
+public class candelaria extends AppCompatActivity  implements OnMapReadyCallback{
 
-    private GoogleMap mMap;
+    private MapView mMapView;
     ToggleButton asistencia;
     TextView estado;
 
@@ -29,41 +30,52 @@ public class candelaria extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_candelaria);
 
-        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
-                .findFragmentById(R.id.map);
+        mMapView = (MapView) findViewById(R.id.map);
+        mMapView.onCreate(savedInstanceState);
 
-        mapFragment.getMapAsync((OnMapReadyCallback) this);
+        mMapView.getMapAsync(this);
 
-        asistencia = findViewById(R.id.asistenciaBtn);
-        estado = findViewById(R.id.estado);
+        //asistencia = findViewById(R.id.asistenciaBtn);
+        //estado = findViewById(R.id.estado);
     }
 
-    public void onMapReady(GoogleMap googleMap) {
-        mMap = googleMap;
-        //      permisos de ubicacion
-        if (ActivityCompat.shouldShowRequestPermissionRationale(this,
-                Manifest.permission.ACCESS_COARSE_LOCATION)) {
-        } else {
-            ActivityCompat.requestPermissions(this,
-                    new String[]{Manifest.permission.ACCESS_COARSE_LOCATION},1);
-        }
 
-        if (ActivityCompat.shouldShowRequestPermissionRationale(this,
-                Manifest.permission.ACCESS_FINE_LOCATION)) {
-        } else {
-            ActivityCompat.requestPermissions(this,
-                    new String[]{Manifest.permission.ACCESS_FINE_LOCATION},1);
-        }
+    @Override
+    protected void onResume() {
+        super.onResume();
+        mMapView.onResume();
+    }
 
-
-        LatLng upc = new LatLng(10.4483192,  -73.2620876);       // Add a marker in Sydney and move the camera
-        mMap.addMarker(new MarkerOptions().position(upc).title("upc valledupar").snippet("Universidad popular del cesar prueba"));//.icon(BitmapDescriptorFactory.fromResource(R.drawable.rio)));
-        mMap.getUiSettings().setZoomControlsEnabled(true);//habilitar zoom
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(upc, 14));// personalizar zoom
+    @Override
+    public void onMapReady(GoogleMap map) {
+        LatLng upc = new LatLng(10.4483192,  -73.2620876);       // Add a marker in upc and move the camera
+        map.addMarker(new MarkerOptions().position(upc).title("Marker"));
+        map.getUiSettings().setZoomControlsEnabled(true);//habilitar zoom
+        map.moveCamera(CameraUpdateFactory.newLatLngZoom(upc, 20));// personalizar zoom
 
     }
 
-    public void confirmarAsistencia(View view) {
+    @Override
+    protected void onPause() {
+        mMapView.onPause();
+        super.onPause();
+    }
 
+    @Override
+    protected void onDestroy() {
+        mMapView.onDestroy();
+        super.onDestroy();
+    }
+
+    @Override
+    public void onLowMemory() {
+        super.onLowMemory();
+        mMapView.onLowMemory();
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        mMapView.onSaveInstanceState(outState);
     }
 }
