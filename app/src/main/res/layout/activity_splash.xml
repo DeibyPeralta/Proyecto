@@ -6,31 +6,20 @@
     android:layout_height="match_parent"
     android:background="@drawable/campo"
     tools:context=".splash">
+ <LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:gravity="center">
+     <ImageView
+         android:id="@+id/imageView3"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="parent"
+         app:srcCompat="@drawable/vallenatapp_nuevo" />
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="186dp"
-        android:layout_height="157dp"
-        android:layout_marginStart="112dp"
-        android:layout_marginTop="208dp"
-        android:layout_marginEnd="113dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo" />
+ </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="253dp"
-        android:layout_height="73dp"
-        android:layout_marginStart="79dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="79dp"
-        android:text="Vallenatapp"
-        android:textColor="#ffff"
-        android:textSize="55dp"
-        app:fontFamily="cursive"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
