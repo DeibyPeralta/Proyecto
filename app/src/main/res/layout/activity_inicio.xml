@@ -8,43 +8,46 @@
     tools:context=".inicio">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:background="#72000000"
+        android:layout_width="361dp"
+        android:layout_height="157dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="280dp"
+        android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-<LinearLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:gravity="center">
-    <Button
-        android:id="@+id/login"
-        android:layout_width="205dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginTop="15dp"
-        android:background="@drawable/boton_redondo"
-        android:onClick="login"
-        android:text="Ingresar"
-        android:textColor="#ffff"
-        android:textSize="18dp"
-        tools:ignore="MissingConstraints" />
-    <Button
-        android:id="@+id/invitado"
-        android:layout_width="205dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginTop="15dp"
-        android:background="@drawable/boton_solo_borde"
-        android:onClick="invitado"
-        android:text="Invitado"
-        android:textColor="#ffff"
-        android:textSize="18dp"
-        tools:ignore="MissingConstraints" />
-</LinearLayout>
+
+        <Button
+            android:id="@+id/login"
+            android:layout_width="305dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/boton_redondo"
+            android:onClick="login"
+            android:text="Login"
+            android:textColor="#ffff"
+            android:textSize="40dp"
+            app:fontFamily="cursive"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/invitado"
+            android:layout_width="305dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/boton_redondo"
+            android:onClick="invitado"
+            android:text="Invitado"
+            android:textColor="#ffff"
+            android:textSize="40dp"
+            app:fontFamily="cursive"
+            tools:ignore="MissingConstraints" />
+
     </LinearLayout>
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
