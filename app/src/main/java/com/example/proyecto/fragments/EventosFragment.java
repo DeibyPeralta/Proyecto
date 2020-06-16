@@ -18,7 +18,7 @@ import com.example.proyecto.informacionPrueba.informacion;
 import java.util.ArrayList;
 
 import com.example.proyecto.interfaxex.IComunicaFragments;
-import com.example.proyecto.vistaEventos.candelaria;
+import com.example.proyecto.vistaEventos.*;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -92,7 +92,8 @@ public class EventosFragment extends Fragment {
                     Intent candelar = new Intent(getContext(), candelaria.class);
                     startActivity(candelar);
                 }else if(listaInformacion.get(recyclerPersonajes.getChildAdapterPosition(v)).getNombre().equals(getString(R.string.SanJuan))){
-
+                    Intent juanBosco = new Intent(getContext(), juanBosco.class);
+                    startActivity(juanBosco);
                 }
 
             }

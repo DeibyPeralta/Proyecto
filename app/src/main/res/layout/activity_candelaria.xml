@@ -48,11 +48,11 @@
                     tools:ignore="MissingConstraints" />
             </LinearLayout>
 
-
             <com.google.android.gms.maps.MapView
                 android:id="@+id/map"
                 android:layout_width="match_parent"
                 android:layout_height="190dp"
+                android:paddingTop="15dp"
                 tools:layout_editor_absoluteX="147dp"
                 tools:layout_editor_absoluteY="147dp" />
 
