@@ -4,113 +4,137 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="20dp"
     android:background="@drawable/campo"
     tools:context=".Registrarse">
 
-
-    <Button
-        android:id="@+id/logear"
-        android:layout_width="172dp"
-        android:layout_height="44dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="108dp"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/boton_redondo"
-        android:text="@string/cuenta"
-        android:textColor="@color/common_google_signin_btn_text_dark_pressed"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/registrarse" />
-
-    <Button
-        android:id="@+id/registrarse"
-        android:layout_width="175dp"
-        android:layout_height="41dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="108dp"
-        android:layout_marginTop="44dp"
-        android:layout_marginEnd="108dp"
-        android:background="@drawable/boton_redondo"
-        android:text="@string/registrarse"
-        android:textColor="@color/common_google_signin_btn_text_dark_pressed"
-        android:textStyle=""
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/correoxx" />
-
-    <EditText
-        android:id="@+id/clave"
-        android:layout_width="245dp"
-        android:layout_height="50dp"
-        android:layout_above="@+id/userx"
-        android:layout_marginStart="73dp"
-        android:layout_marginLeft="73dp"
-        android:layout_marginEnd="73dp"
-        android:layout_marginRight="73dp"
-        android:background="@drawable/sombra_txt"
-        android:ems="10"
+    <LinearLayout
+        android:layout_width="310dp"
+        android:layout_height="495dp"
+        android:background="#42000000"
         android:gravity="center"
-        android:hint="@string/textClave"
-        android:inputType="textPersonName"
-        android:password="true"
-        android:textColor="@color/common_google_signin_btn_text_dark_pressed"
-        android:textColorHint="@color/common_google_signin_btn_text_dark_pressed"
-        android:textStyle="italic"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/userx" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <EditText
-        android:id="@+id/userx"
-        android:layout_width="245dp"
-        android:layout_height="50dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="73dp"
-        android:layout_marginLeft="73dp"
-        android:layout_marginTop="120dp"
-        android:layout_marginEnd="73dp"
-        android:layout_marginRight="73dp"
-        android:background="@drawable/sombra_txt"
-        android:ems="10"
-        android:gravity="center"
-        android:hint="@string/textUsuario"
-        android:inputType="textPersonName"
-        android:textColor="#ffff"
-        android:textColorHint="@color/common_google_signin_btn_text_dark_pressed"
-        android:textIsSelectable="false"
-        android:textStyle="italic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:orientation="horizontal">
 
-    <EditText
-        android:id="@+id/correoxx"
-        android:layout_width="245dp"
-        android:layout_height="50dp"
-        android:layout_above="@+id/clave"
-        android:layout_marginStart="73dp"
-        android:layout_marginLeft="73dp"
-        android:layout_marginEnd="73dp"
-        android:layout_marginRight="73dp"
-        android:background="@drawable/sombra_txt"
-        android:ems="10"
-        android:gravity="center"
-        android:hint="@string/textCorreo"
-        android:inputType="textPersonName"
-        android:textColor="@color/common_google_signin_btn_text_dark_pressed"
-        android:textColorHint="@color/common_google_signin_btn_text_dark_pressed"
-        android:textStyle="italic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/clave" />
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/icono_vallenatapp"
+                android:background="@drawable/circulo_blanco"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:padding="5dp"
+                android:text="@string/crear_cuenta"
+                android:textColor="#EF5350"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+        <EditText
+            android:id="@+id/userx"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/sombra_txt"
+            android:ems="10"
+            android:hint="@string/textUsuario"
+            android:inputType="textPersonName"
+            android:paddingLeft="15dp"
+            android:textColor="#000000"
+            android:textColorHint="@color/common_google_signin_btn_text_light_pressed"
+            android:textIsSelectable="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/correoxx"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_above="@+id/clave"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/sombra_txt"
+            android:ems="10"
+            android:hint="@string/textCorreo"
+            android:inputType="textPersonName"
+            android:paddingLeft="15dp"
+            android:textColor="@color/common_google_signin_btn_text_light_pressed"
+            android:textColorHint="@color/common_google_signin_btn_text_light_pressed"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/clave" />
+
+        <EditText
+            android:id="@+id/clave"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_above="@+id/userx"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/sombra_txt"
+            android:ems="10"
+            android:hint="@string/textClave"
+            android:inputType="textPersonName"
+            android:paddingLeft="15dp"
+            android:password="true"
+            android:textColor="@color/common_google_signin_btn_text_light_pressed"
+            android:textColorHint="@color/common_google_signin_btn_text_light_pressed"
+            android:textStyle=""
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/userx" />
+
+        <Button
+            android:id="@+id/registrarse"
+            android:layout_width="220dp"
+            android:layout_height="41dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="108dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="108dp"
+            android:background="@drawable/boton_redondo"
+            android:text="@string/registrarse"
+            android:textColor="@color/common_google_signin_btn_text_dark_pressed"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/correoxx" />
+
+        <Button
+            android:id="@+id/logear"
+            android:layout_width="172dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/boton_solo_borde"
+            android:text="@string/cuenta"
+            android:textColor="@color/common_google_signin_btn_text_dark_pressed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/registrarse" />
+
+
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
