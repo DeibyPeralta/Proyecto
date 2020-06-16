@@ -27,10 +27,9 @@
             android:layout_marginRight="20dp"
             android:background="@drawable/boton_redondo"
             android:onClick="login"
-            android:text="Login"
+            android:text="Ingresar"
             android:textColor="#ffff"
-            android:textSize="40dp"
-            app:fontFamily="cursive"
+            android:textSize="30sp"
             tools:ignore="MissingConstraints" />
 
         <Button
@@ -40,12 +39,11 @@
             android:layout_marginLeft="10dp"
             android:layout_marginTop="15dp"
             android:layout_marginRight="20dp"
-            android:background="@drawable/boton_redondo"
+            android:background="@drawable/boton_solo_borde"
             android:onClick="invitado"
             android:text="Invitado"
             android:textColor="#ffff"
-            android:textSize="40dp"
-            app:fontFamily="cursive"
+            android:textSize="30sp"
             tools:ignore="MissingConstraints" />
 
     </LinearLayout>
