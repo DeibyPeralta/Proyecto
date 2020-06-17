@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
         visitar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "Falta agregarle botones y estos que lleven a los pueblos", Toast.LENGTH_SHORT).show();
+        Intent qvisitar = new Intent(MainActivity.this, QueVisitar.class);
             }
         });
 
