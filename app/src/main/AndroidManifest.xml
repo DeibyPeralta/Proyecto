@@ -19,7 +19,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".hoteles.tativan"></activity>
+        <activity android:name=".hoteles.maranata"></activity>
+        <activity android:name=".hoteles.sonesta" />
+        <activity android:name=".hoteles.tativan" />
         <activity android:name=".hoteles.mayalesPlaza" />
         <activity android:name=".hoteles.Sicarare" />
         <activity android:name=".vistaEventos.juanBosco" />

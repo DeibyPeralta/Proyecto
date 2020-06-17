@@ -17,7 +17,7 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class mayalesPlaza extends AppCompatActivity implements OnMapReadyCallback {
+public class maranata extends AppCompatActivity implements OnMapReadyCallback {
 
     private RatingBar calificacionx;
     private Button calificar;
@@ -27,8 +27,7 @@ public class mayalesPlaza extends AppCompatActivity implements OnMapReadyCallbac
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mayales_plaza);
-
+        setContentView(R.layout.activity_maranata);
         mMapView = (MapView) findViewById(R.id.map);
         mMapView.onCreate(savedInstanceState);
 
@@ -38,7 +37,7 @@ public class mayalesPlaza extends AppCompatActivity implements OnMapReadyCallbac
         aero.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(mayalesPlaza.this, "Traslado aueropuerto (gratis)", Toast.LENGTH_SHORT).show();
+                Toast.makeText(maranata.this, "Traslado aueropuerto (gratis)", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -46,7 +45,7 @@ public class mayalesPlaza extends AppCompatActivity implements OnMapReadyCallbac
         wifi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(mayalesPlaza.this, "Wifi (gratis)", Toast.LENGTH_SHORT).show();
+                Toast.makeText(maranata.this, "Wifi (gratis)", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -54,7 +53,7 @@ public class mayalesPlaza extends AppCompatActivity implements OnMapReadyCallbac
         bar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(mayalesPlaza.this, "Excelentes bebidas en el bar", Toast.LENGTH_SHORT).show();
+                Toast.makeText(maranata.this, "Excelentes bebidas en el bar", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -62,7 +61,7 @@ public class mayalesPlaza extends AppCompatActivity implements OnMapReadyCallbac
         comida.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(mayalesPlaza.this, "Muy buen desayuno", Toast.LENGTH_SHORT).show();
+                Toast.makeText(maranata.this, "Muy buen desayuno", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -73,7 +72,7 @@ public class mayalesPlaza extends AppCompatActivity implements OnMapReadyCallbac
             @Override
             public void onClick(View v) {
                 String ranking = String.valueOf(calificacionx.getRating());
-                Toast.makeText(mayalesPlaza.this, "calificaste con " + ranking + "estrellas", Toast.LENGTH_SHORT).show();
+                Toast.makeText(maranata.this, "calificaste con " + ranking + "estrellas", Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -85,8 +84,8 @@ public class mayalesPlaza extends AppCompatActivity implements OnMapReadyCallbac
 
     @Override
     public void onMapReady(GoogleMap map) {
-        LatLng upc = new LatLng(10.460734, -73.228788);       // Add a marker in upc and move the camera
-        map.addMarker(new MarkerOptions().position(upc).title("Hotel Mayales plaza"));
+        LatLng upc = new LatLng(10.469825, -73.245585);       // Add a marker in upc and move the camera
+        map.addMarker(new MarkerOptions().position(upc).title("Hotel Maranata"));
         map.getUiSettings().setZoomControlsEnabled(true);//habilitar zoom
         map.moveCamera(CameraUpdateFactory.newLatLngZoom(upc, 15));// personalizar zoom
 

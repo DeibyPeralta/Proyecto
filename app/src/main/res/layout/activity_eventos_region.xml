@@ -67,7 +67,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="54dp"
                 android:background="@drawable/transparente"
-                android:text="@string/festival"
+                android:text="Sonesta"
                 android:textColor="#ffff"
                 tools:layout_editor_absoluteX="68dp"
                 tools:layout_editor_absoluteY="88dp" />
@@ -80,10 +80,11 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="54dp"
                 android:background="@drawable/transparente"
-                android:text="@string/cafe"
+                android:text="Maranata Valledupar"
                 android:textColor="#ffff"
                 tools:layout_editor_absoluteX="68dp"
                 tools:layout_editor_absoluteY="88dp" />
+
         </LinearLayout>
 
 

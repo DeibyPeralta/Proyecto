@@ -12,7 +12,8 @@ import com.example.proyecto.hoteles.*;
 
 public class EventosRegion extends AppCompatActivity {
 
-   Button candelariax, mayalesx, tativan;
+   Button candelariax, mayalesx, tativan, sonesta, Maranata;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +39,24 @@ public class EventosRegion extends AppCompatActivity {
 
         tativan = findViewById(R.id.acordeon);
         tativan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent tativan = new Intent(EventosRegion.this, tativan.class);
+                startActivity(tativan);
+            }
+        });
+
+        sonesta = findViewById(R.id.leyenda);
+        sonesta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent tativan = new Intent(EventosRegion.this, tativan.class);
+                startActivity(tativan);
+            }
+        });
+
+        Maranata = findViewById(R.id.cafe);
+        Maranata.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent tativan = new Intent(EventosRegion.this, tativan.class);
