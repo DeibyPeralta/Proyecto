@@ -15,6 +15,8 @@ public class dbUtilidades {
 
 
 
+
+
     // constantes campos tabla eventos
     public static final String tabla_eventos ="eventos";
 
@@ -40,9 +42,25 @@ public class dbUtilidades {
     public static final String descripcionActividad = "descripcion";
     public static final String Calificacion = "estrellas";
 
-    public static final String Create_Table_Actividades = "CREATE TABLE " + tabla_eventos
+    public static final String Create_Table_Actividades = "CREATE TABLE " + tabla_actividades
             + " ("+ nameActividad +" Text, "
             + fecha +"text,"
             + descripcionActividad +"text,"
             + Calificacion +" Text)";
+
+
+
+    // constantes campos tabla hoteles
+    public static final String tabla_hoteles ="hoteles";
+
+    public static final String nameHotel = "nameActividad";
+    public static final String descripcionh = "descripcion";
+    public static final String calificacion = "calificacion";
+    public static final String direccion = "direccion";
+
+    public static final String Create_Table_hoteles = "CREATE TABLE " + tabla_hoteles
+            + " ("+ nameHotel +" Text, "
+            + descripcionh +"text,"
+            + calificacion +"text,"
+            + direccion +" Text)";
 }

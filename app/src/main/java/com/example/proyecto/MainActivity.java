@@ -39,7 +39,8 @@ public class MainActivity extends AppCompatActivity {
         region.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "Falta agregarlo", Toast.LENGTH_SHORT).show();
+                Intent queHacer = new Intent(MainActivity.this, EventosRegion.class);
+                startActivity(queHacer);
             }
         });
 
