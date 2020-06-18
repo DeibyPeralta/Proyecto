@@ -8,15 +8,16 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.proyecto.Quevisitar.Nabusimake;
+import com.example.proyecto.Quevisitar.atanquez;
+import com.example.proyecto.Quevisitar.puebloBello;
 
 public class QueVisitar extends AppCompatActivity {
-    Button candelariax, mayalesx, tativan, sonesta, Maranata;
+    Button candelariax, atanquez, puebloBello, sonesta, cienaga;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_que_visitar);
-
 
         candelariax=findViewById(R.id.candelaria);
         candelariax.setOnClickListener(new View.OnClickListener() {
@@ -27,39 +28,33 @@ public class QueVisitar extends AppCompatActivity {
             }
         });
 
-        mayalesx = findViewById(R.id.sanJuan);
-        mayalesx.setOnClickListener(new View.OnClickListener() {
+        atanquez = findViewById(R.id.sanJuan);
+        atanquez.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent mayales = new Intent(QueVisitar.this, mayalesPlaza.class);
-                startActivity(mayales);
+                Intent atanquezx = new Intent(QueVisitar.this, atanquez.class);
+                startActivity(atanquezx);
             }
         });
 
-        tativan = findViewById(R.id.acordeon);
-        tativan.setOnClickListener(new View.OnClickListener() {
+        puebloBello = findViewById(R.id.acordeon);
+        puebloBello.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent tativan = new Intent(QueVisitar.this, com.example.proyecto.hoteles.tativan.class);
+                Intent puebloBellox = new Intent(QueVisitar.this, puebloBello.class);
+                startActivity(puebloBellox);
+            }
+        });
+
+        cienaga = findViewById(R.id.leyenda);
+        cienaga.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent tativan = new Intent(QueVisitar.this, cienagaZapatoca.class);
                 startActivity(tativan);
             }
         });
 
-        sonesta = findViewById(R.id.leyenda);
-        sonesta.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent tativan = new Intent(QueVisitar.this, tativan.class);
-                startActivity(tativan);
-            }
-        });
 
-        Maranata = findViewById(R.id.cafe);
-        Maranata.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent tativan = new Intent(QueVisitar.this, tativan.class);
-                startActivity(tativan);
-            }
-        });
     }
+}

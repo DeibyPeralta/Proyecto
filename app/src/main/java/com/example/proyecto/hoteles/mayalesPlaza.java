@@ -77,6 +77,7 @@ public class mayalesPlaza extends AppCompatActivity implements OnMapReadyCallbac
             }
         });
     }
+
     @Override
     protected void onResume() {
         super.onResume();

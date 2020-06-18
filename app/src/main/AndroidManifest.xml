@@ -19,7 +19,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Quevisitar.Nabusimake"></activity>
+        <activity android:name=".Quevisitar.cienagaZapatosa"></activity>
+        <activity android:name=".Quevisitar.puebloBello" />
+        <activity android:name=".Quevisitar.atanquez" />
+        <activity android:name=".Quevisitar.Nabusimake" />
         <activity android:name=".QueVisitar" />
         <activity android:name=".hoteles.maranata" />
         <activity android:name=".hoteles.sonesta" />

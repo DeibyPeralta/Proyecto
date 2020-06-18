@@ -3,8 +3,6 @@ package com.example.proyecto.Quevisitar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.widget.Button;
-import android.widget.RatingBar;
 
 import com.example.proyecto.R;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -14,22 +12,21 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class Nabusimake extends AppCompatActivity implements OnMapReadyCallback {
+public class puebloBello extends AppCompatActivity implements OnMapReadyCallback {
 
-    private RatingBar calificacionx;
     private MapView mMapView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_nabusimake);
+        setContentView(R.layout.activity_pueblo_bello);
 
         mMapView = (MapView) findViewById(R.id.map);
         mMapView.onCreate(savedInstanceState);
 
         mMapView.getMapAsync(this);
-    }
 
+    }
     @Override
     protected void onResume() {
         super.onResume();
@@ -38,8 +35,8 @@ public class Nabusimake extends AppCompatActivity implements OnMapReadyCallback 
 
     @Override
     public void onMapReady(GoogleMap map) {
-        LatLng upc = new LatLng(10.566957, -73.600079);       // Add a marker in upc and move the camera
-        map.addMarker(new MarkerOptions().position(upc).title("Nabusimake"));
+        LatLng upc = new LatLng(10.412751, -73.589347);       // Add a marker in upc and move the camera
+        map.addMarker(new MarkerOptions().position(upc).title("Pueblo bello"));
         map.getUiSettings().setZoomControlsEnabled(true);//habilitar zoom
         map.moveCamera(CameraUpdateFactory.newLatLngZoom(upc, 15));// personalizar zoom
 
@@ -69,4 +66,3 @@ public class Nabusimake extends AppCompatActivity implements OnMapReadyCallback 
         mMapView.onSaveInstanceState(outState);
     }
 }
-

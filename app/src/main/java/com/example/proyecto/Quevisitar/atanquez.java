@@ -3,7 +3,6 @@ package com.example.proyecto.Quevisitar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.widget.Button;
 import android.widget.RatingBar;
 
 import com.example.proyecto.R;
@@ -14,15 +13,14 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class Nabusimake extends AppCompatActivity implements OnMapReadyCallback {
+public class atanquez extends AppCompatActivity implements OnMapReadyCallback {
 
     private RatingBar calificacionx;
     private MapView mMapView;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_nabusimake);
+        setContentView(R.layout.activity_atanquez);
 
         mMapView = (MapView) findViewById(R.id.map);
         mMapView.onCreate(savedInstanceState);
@@ -38,8 +36,8 @@ public class Nabusimake extends AppCompatActivity implements OnMapReadyCallback 
 
     @Override
     public void onMapReady(GoogleMap map) {
-        LatLng upc = new LatLng(10.566957, -73.600079);       // Add a marker in upc and move the camera
-        map.addMarker(new MarkerOptions().position(upc).title("Nabusimake"));
+        LatLng upc = new LatLng(10.696677, -73.355838);       // Add a marker in upc and move the camera
+        map.addMarker(new MarkerOptions().position(upc).title("Atanquez"));
         map.getUiSettings().setZoomControlsEnabled(true);//habilitar zoom
         map.moveCamera(CameraUpdateFactory.newLatLngZoom(upc, 15));// personalizar zoom
 
@@ -69,4 +67,3 @@ public class Nabusimake extends AppCompatActivity implements OnMapReadyCallback 
         mMapView.onSaveInstanceState(outState);
     }
 }
-

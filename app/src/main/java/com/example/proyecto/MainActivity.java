@@ -83,7 +83,8 @@ public class MainActivity extends AppCompatActivity {
         visitar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-        Intent qvisitar = new Intent(MainActivity.this, QueVisitar.class);
+                Intent qvisitar = new Intent(MainActivity.this, QueVisitar.class);
+                startActivity(qvisitar);
             }
         });
 
