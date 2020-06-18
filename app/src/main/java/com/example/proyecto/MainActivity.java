@@ -76,7 +76,8 @@ public class MainActivity extends AppCompatActivity {
         recreacion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "Falta agregarlo", Toast.LENGTH_SHORT).show();
+                Intent recreacion = new Intent(MainActivity.this, recreos.class);
+                startActivity(recreacion);
             }
         });
 

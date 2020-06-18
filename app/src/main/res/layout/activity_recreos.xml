@@ -4,6 +4,65 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".vistaEventos.recreos">
+    android:background="@drawable/campo"
+    tools:context=".recreos">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/candelaria"
+                android:layout_width="303dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="54dp"
+                android:layout_marginRight="54dp"
+                android:background="@drawable/transparente"
+                android:text="Caminata santa ecce homo"
+                android:textColor="#ffff"
+                tools:layout_editor_absoluteX="68dp"
+                tools:layout_editor_absoluteY="88dp" />
+
+            <Button
+                android:id="@+id/sanJuan"
+                android:layout_width="303dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="54dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="54dp"
+                android:background="@drawable/transparente"
+                android:text="Mayales plaza"
+                android:textColor="#ffff"
+                tools:layout_editor_absoluteX="68dp"
+                tools:layout_editor_absoluteY="88dp" />
+
+            <Button
+                android:id="@+id/acordeon"
+                android:layout_width="303dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="54dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="54dp"
+                android:background="@drawable/transparente"
+                android:text="Tativan"
+                android:textColor="#ffff"
+                tools:layout_editor_absoluteX="68dp"
+                tools:layout_editor_absoluteY="88dp" />
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
