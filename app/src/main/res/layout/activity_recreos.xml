@@ -40,24 +40,10 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="54dp"
                 android:background="@drawable/transparente"
-                android:text="Mayales plaza"
+                android:text="Manaure"
                 android:textColor="#ffff"
                 tools:layout_editor_absoluteX="68dp"
                 tools:layout_editor_absoluteY="88dp" />
-
-            <Button
-                android:id="@+id/acordeon"
-                android:layout_width="303dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="54dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="54dp"
-                android:background="@drawable/transparente"
-                android:text="Tativan"
-                android:textColor="#ffff"
-                tools:layout_editor_absoluteX="68dp"
-                tools:layout_editor_absoluteY="88dp" />
-
 
 
         </LinearLayout>

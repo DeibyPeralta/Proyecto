@@ -92,7 +92,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginLeft="14dp"
                 android:textSize="24dp"
-                android:text="Servicios populares" />
+                android:text="Beneficos populares" />
 
             <LinearLayout
                 android:layout_width="match_parent"
