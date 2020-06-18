@@ -34,8 +34,8 @@ public class cienagaZapatosa extends AppCompatActivity implements OnMapReadyCall
 
     @Override
     public void onMapReady(GoogleMap map) {
-        LatLng upc = new LatLng(10.412751, -73.589347);       // Add a marker in upc and move the camera
-        map.addMarker(new MarkerOptions().position(upc).title("Pueblo bello"));
+        LatLng upc = new LatLng(9.200106, -73.816697);       // Add a marker in upc and move the camera
+        map.addMarker(new MarkerOptions().position(upc).title("Cienaga zapatoca"));
         map.getUiSettings().setZoomControlsEnabled(true);//habilitar zoom
         map.moveCamera(CameraUpdateFactory.newLatLngZoom(upc, 15));// personalizar zoom
 

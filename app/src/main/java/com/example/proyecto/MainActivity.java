@@ -67,7 +67,8 @@ public class MainActivity extends AppCompatActivity {
         fiestas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "Falta agregarlo", Toast.LENGTH_SHORT).show();
+                Intent nocturnox = new Intent(MainActivity.this, nocturno.class);
+                startActivity(nocturnox);
             }
         });
 

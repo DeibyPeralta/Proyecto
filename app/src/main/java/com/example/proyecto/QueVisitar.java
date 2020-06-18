@@ -9,6 +9,7 @@ import android.widget.Button;
 
 import com.example.proyecto.Quevisitar.Nabusimake;
 import com.example.proyecto.Quevisitar.atanquez;
+import com.example.proyecto.Quevisitar.cienagaZapatosa;
 import com.example.proyecto.Quevisitar.puebloBello;
 
 public class QueVisitar extends AppCompatActivity {
@@ -50,7 +51,7 @@ public class QueVisitar extends AppCompatActivity {
         cienaga.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent tativan = new Intent(QueVisitar.this, cienagaZapatoca.class);
+                Intent tativan = new Intent(QueVisitar.this, cienagaZapatosa.class);
                 startActivity(tativan);
             }
         });

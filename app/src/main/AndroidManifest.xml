@@ -19,7 +19,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Quevisitar.cienagaZapatosa"></activity>
+        <activity android:name=".nocturnos.bodegita"></activity>
+        <activity android:name=".nocturnos.cantores" />
+        <activity android:name=".nocturnos.patioBar" />
+        <activity android:name=".nocturnos.palenqueBar" />
+        <activity android:name=".nocturno" />
+        <activity android:name=".Quevisitar.cienagaZapatosa" />
         <activity android:name=".Quevisitar.puebloBello" />
         <activity android:name=".Quevisitar.atanquez" />
         <activity android:name=".Quevisitar.Nabusimake" />
